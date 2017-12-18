@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author: Henri
-# @Date:   2017-08-30 11:28:10
-# @Last Modified by:   Henri
-# @Last Modified time: 2017-08-30 11:58:10
 import bob
 import bob.measure
 import logging
@@ -67,7 +62,7 @@ def main():
             continue
         negatives = evallabtoscore[label]
         eer_label = bob.measure.eer_rocch(negatives, positives)
-        logging.info("[Eval] LAB: {} EER: {:=4.3f}  ".format(
+        print("[Eval] LAB: {} EER: {:=4.3f}  ".format(
                      label, 100*eer_label))
 
     evalallnegatives = list(itertools.chain.from_iterable(

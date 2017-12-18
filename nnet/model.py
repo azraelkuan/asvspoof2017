@@ -1,9 +1,16 @@
 import torch
+import math
 from torch import nn
 import torch.nn.init as init
+import torch.nn.functional as F
 
 
-class DNN(nn.ModuleList):
+"""
+DNN
+"""
+
+
+class DNN(nn.Module):
 
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(DNN, self).__init__()
@@ -49,6 +56,11 @@ class DNN(nn.ModuleList):
                 init.constant(each_module.bias, 0.)
 
 
+"""
+RNN
+"""
+
+
 class RNN(nn.Module):
 
     def __init__(self, input_dim, hidden_dim, num_layers, output_dim, drop_out):
@@ -72,6 +84,10 @@ class RNN(nn.Module):
     def init_weight(self):
         pass
 
+"""
+CNN
+"""
+
 
 class CNN(nn.Module):
 
@@ -82,30 +98,183 @@ class CNN(nn.Module):
         self.drop_out = drop_out
 
         self.conv1 = nn.Sequential(
-            nn.Conv2d(1, 64, 3),
+            nn.Conv2d(1, 64, 11),
             nn.BatchNorm2d(64),
-            nn.MaxPool2d(2)
+            nn.MaxPool2d(3)
         )
         self.conv2 = nn.Sequential(
-            nn.Conv2d(64, 64, 5),
+            nn.Conv2d(64, 64, 7),
             nn.BatchNorm2d(64),
-            nn.MaxPool2d(2)
+            nn.MaxPool2d(3)
         )
         self.linear = nn.Sequential(
-            nn.Linear(1024, 1024),
+            nn.Linear(3840, 1024),
+            nn.BatchNorm1d(1024),
             nn.ReLU(True),
-            nn.Dropout(drop_out),
+            nn.Dropout(0.5),
             nn.Linear(1024, 1024),
+            nn.BatchNorm1d(1024),
             nn.ReLU(True),
-            nn.Dropout(drop_out),
+            nn.Dropout(0.5),
+            nn.Linear(1024, 1024),
+            nn.BatchNorm1d(1024),
+            nn.ReLU(True),
+            nn.Dropout(0.5),
             nn.Linear(1024, output_dim)
         )
 
     def forward(self, x):
         batch_size, dim = x.size()
+        assert dim == 1001 * 11
         x = x.view(batch_size, 1, self.input_dim, -1)
         x = self.conv1(x)
         x = self.conv2(x)
         x = x.view(batch_size, -1)
         x = self.linear(x)
         return x
+
+
+"""
+VGG
+"""
+
+
+vgg_cfg = {
+    'VGG11': [16, 16, 'M', 32, 32, 'M', 64, 64, 'M', 128, 128, 'M']
+}
+
+
+class VGG(nn.Module):
+
+    def __init__(self, input_dim, vgg_name):
+        super(VGG, self).__init__()
+        self.input_dim = input_dim
+        self.features = self.make_layers(vgg_cfg[vgg_name])
+        self.linear = nn.Sequential(
+            nn.Linear(4096, 2048),
+            nn.ReLU(True),
+            nn.Dropout(),
+            nn.Linear(2048, 2048),
+            nn.ReLU(True),
+            nn.Dropout(),
+            nn.Linear(2048, 2)
+        )
+        self._initialize_weights()
+
+    def forward(self, x):
+        batch_size, dim = x.size()
+        assert dim == 1001 * 11
+        x = x.view(batch_size, 1, self.input_dim, -1)
+
+        out = self.features(x)
+        out = out.view(out.size(0), -1)
+        out = self.linear(out)
+        return out
+
+    def make_layers(self, cfg):
+        layers = []
+        in_channels = 1
+        for x in cfg:
+            if x == 'M':
+                layers += [nn.MaxPool2d(kernel_size=2, stride=2)]
+            else:
+                layers += [
+                    nn.Conv2d(in_channels, x, kernel_size=3, padding=1),
+                    nn.BatchNorm2d(x),
+                    nn.ReLU(True)
+                ]
+                in_channels = x
+        return nn.Sequential(*layers)
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
+                m.weight.data.normal_(0, math.sqrt(2. / n))
+                if m.bias is not None:
+                    m.bias.data.zero_()
+            elif isinstance(m, nn.BatchNorm2d):
+                m.weight.data.fill_(1)
+                m.bias.data.zero_()
+            elif isinstance(m, nn.Linear):
+                m.weight.data.normal_(0, 0.01)
+                m.bias.data.zero_()
+
+"""
+Light CNN
+"""
+
+
+class mfm(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1, type=1):
+        super(mfm, self).__init__()
+        self.out_channels = out_channels
+        if type == 1:
+            self.filter = nn.Conv2d(in_channels, 2*out_channels, kernel_size=kernel_size, stride=stride, padding=padding)
+        else:
+            self.filter = nn.Linear(in_channels, 2*out_channels)
+
+    def forward(self, x):
+        x = self.filter(x)
+        out = torch.split(x, self.out_channels, 1)
+        return torch.max(out[0], out[1])
+
+
+class group(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size, stride, padding):
+        super(group, self).__init__()
+        self.conv_a = mfm(in_channels, in_channels, 1, 1, 0)
+        self.conv   = mfm(in_channels, out_channels, kernel_size, stride, padding)
+
+    def forward(self, x):
+        x = self.conv_a(x)
+        x = self.conv(x)
+        return x
+
+
+class resblock(nn.Module):
+    def __init__(self, in_channels, out_channels):
+        super(resblock, self).__init__()
+        self.conv1 = mfm(in_channels, out_channels, kernel_size=3, stride=1, padding=1)
+        self.conv2 = mfm(in_channels, out_channels, kernel_size=3, stride=1, padding=1)
+
+    def forward(self, x):
+        res = x
+        out = self.conv1(x)
+        out = self.conv2(out)
+        out = out + res
+        return out
+
+
+class LCNN(nn.Module):
+
+    def __init__(self, input_dim, num_classes=2):
+        super(LCNN, self).__init__()
+        self.input_dim = input_dim
+
+        self.features = nn.Sequential(
+            mfm(1, 24, 5, 1, 2),
+            nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
+            group(24, 48, 3, 1, 1),
+            nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
+            group(48, 81, 3, 1, 1),
+            nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
+            group(81, 64, 3, 1, 1),
+            group(64, 64, 3, 1, 1),
+            nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
+        )
+        self.fc1 = mfm(2880, 256, type=0)
+        self.fc2 = nn.Linear(256, num_classes)
+
+    def forward(self, x):
+        batch_size, dim = x.size()
+        assert dim == 1001 * 11
+        x = x.view(batch_size, 1, self.input_dim, -1)
+
+        x = self.features(x)
+        x = x.view(x.size(0), -1)
+        x = self.fc1(x)
+        x = F.dropout(x, training=self.training)
+        out = self.fc2(x)
+        return out
+

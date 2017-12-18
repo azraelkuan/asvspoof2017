@@ -15,11 +15,20 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 
 ## Result
 > the column 3 and 4 only use train data
+
 > the column 5 use train and dev data to test the eval
 
+** These Result are very bad!!! **
 
-|    system    | feature | EER(Dev) | EER(Eval) | EER(Eval) |
-| :---------- | :---: |:---: | :---: | :---: |
-| Baseline | cqcc | 10.35 | 28.48 | |
-| Baseline | mfcc | 15.19 | 33.39 | |
-| DNN | cqcc | 8.65 |  | |
+|    system    | feature | EER(Dev) | EER(Eval) | EER(Eval) | Remarks |
+| :---------- | :---: |:---: | :---: | :---: | :-----: |
+| Baseline | mfcc | 15.19 | 33.39 | | |
+| Baseline | cqcc | 10.35 | 28.48 | | |
+| DNN | mfcc | 15.028 | 45.137 | 42.080 |
+| DNN | cqcc | 7.588 | 34.580 | 31.900 |
+| CNN | fft |  |  |  |
+| CNN | db4 |  |  |  |
+| CNN | db8 |  |  |  |
+
+
+ 
