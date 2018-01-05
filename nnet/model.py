@@ -3,6 +3,7 @@ import math
 from torch import nn
 import torch.nn.init as init
 import torch.nn.functional as F
+from torch.autograd import Variable
 
 
 """
@@ -17,27 +18,27 @@ class DNN(nn.Module):
         self.main = nn.Sequential(
                 nn.Linear(input_dim, hidden_dim),
                 nn.BatchNorm1d(hidden_dim),
-                nn.ReLU(True),
+                nn.LeakyReLU(True),
                 nn.Dropout(0.5),
 
                 nn.Linear(hidden_dim, hidden_dim),
                 nn.BatchNorm1d(hidden_dim),
-                nn.ReLU(True),
+                nn.LeakyReLU(True),
                 nn.Dropout(0.5),
                 
                 nn.Linear(hidden_dim, hidden_dim),
                 nn.BatchNorm1d(hidden_dim),
-                nn.ReLU(True),
+                nn.LeakyReLU(True),
                 nn.Dropout(0.5),
                 
                 nn.Linear(hidden_dim, hidden_dim),
                 nn.BatchNorm1d(hidden_dim),
-                nn.ReLU(True),
+                nn.LeakyReLU(True),
                 nn.Dropout(0.5),
                 
                 nn.Linear(hidden_dim, hidden_dim),
                 nn.BatchNorm1d(hidden_dim),
-                nn.ReLU(True),
+                nn.LeakyReLU(True),
                 nn.Dropout(0.5),
 
                 nn.Linear(hidden_dim, output_dim)
@@ -224,7 +225,7 @@ class group(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, stride, padding):
         super(group, self).__init__()
         self.conv_a = mfm(in_channels, in_channels, 1, 1, 0)
-        self.conv   = mfm(in_channels, out_channels, kernel_size, stride, padding)
+        self.conv = mfm(in_channels, out_channels, kernel_size, stride, padding)
 
     def forward(self, x):
         x = self.conv_a(x)
@@ -232,49 +233,88 @@ class group(nn.Module):
         return x
 
 
-class resblock(nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(resblock, self).__init__()
-        self.conv1 = mfm(in_channels, out_channels, kernel_size=3, stride=1, padding=1)
-        self.conv2 = mfm(in_channels, out_channels, kernel_size=3, stride=1, padding=1)
-
-    def forward(self, x):
-        res = x
-        out = self.conv1(x)
-        out = self.conv2(out)
-        out = out + res
-        return out
-
-
 class LCNN(nn.Module):
 
-    def __init__(self, input_dim, num_classes=2):
+    def __init__(self, num_classes=2):
         super(LCNN, self).__init__()
-        self.input_dim = input_dim
 
         self.features = nn.Sequential(
-            mfm(1, 24, 5, 1, 2),
+            mfm(1, 8, 5, 1, 2),
             nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
-            group(24, 48, 3, 1, 1),
+                group(8, 16, 3, 1, 1),
             nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
-            group(48, 81, 3, 1, 1),
+            group(16, 32, 3, 1, 1),
             nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
-            group(81, 64, 3, 1, 1),
-            group(64, 64, 3, 1, 1),
+            group(32, 24, 3, 1, 1),
+            group(24, 24, 3, 1, 1),
             nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
         )
-        self.fc1 = mfm(2880, 256, type=0)
-        self.fc2 = nn.Linear(256, num_classes)
+        self.block = nn.Sequential(
+            mfm(20064, 256, type=0),
+            nn.Dropout(),
+            nn.Linear(256, num_classes)
+        )
+
+        self.init_weight()
 
     def forward(self, x):
-        batch_size, dim = x.size()
-        assert dim == 1001 * 11
-        x = x.view(batch_size, 1, self.input_dim, -1)
-
+        x = x.view(x.size(0), 1, x.size(1), x.size(2))
         x = self.features(x)
         x = x.view(x.size(0), -1)
-        x = self.fc1(x)
-        x = F.dropout(x, training=self.training)
-        out = self.fc2(x)
+        # print(x.size())
+        # input()
+        out = self.block(x)
         return out
+
+    def init_weight(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.xavier_uniform(m.weight.data)
+                m.bias.data.zero_()
+            elif isinstance(m, nn.Linear):
+                nn.init.xavier_uniform(m.weight.data)
+                m.bias.data.zero_()
+
+
+# not work, i don't konw now
+class RawCNN(nn.Module):
+
+    def __init__(self, input_dim, drop_out):
+        super(RawCNN, self).__init__()
+        self.input_dim = input_dim
+        last_filter_size = 1
+        cur_filter_size = 16
+        block_list = nn.ModuleList()
+
+        for i in range(8):
+            pool_size = 3 if i < 7 else 2
+            block_list += self.conv1d(last_filter_size, cur_filter_size, pool_size=pool_size)
+            last_filter_size = cur_filter_size
+            if drop_out > 0:
+                block_list += [nn.Dropout(drop_out)]
+
+            if i < 2:
+                cur_filter_size = 16
+            elif i < 4:
+                cur_filter_size = 64
+            else:
+                cur_filter_size = 128
+        self.convs = nn.Sequential(*block_list)
+        self.linear = nn.Linear(1408, 2)
+
+    def forward(self, x):
+        x = x.view(x.size(0), 1, x.size(1))
+        x = self.convs(x)
+        x = x.view(x.size(0), -1)
+        return self.linear(x)
+
+    def conv1d(self, in_channels, out_channels, kernel_size=3, pool_size=3):
+        return [
+            nn.Sequential(
+                nn.Conv1d(in_channels, out_channels, kernel_size, stride=1, padding=1),
+                nn.BatchNorm1d(out_channels),
+                nn.LeakyReLU(True),
+                nn.MaxPool1d(pool_size)
+            )
+        ]
 
