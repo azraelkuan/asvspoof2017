@@ -18,7 +18,7 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 
 > the column 5 use train and dev data to test the eval
 
-|  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) | Frequency Range | B | |       Remarks        |
+|  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) | Frequency Range | B |       Remarks        |
 | :------: | :-----: | :------: | :-------: | :-------: | :-------: | :----: | :------------------: |
 | GMM | cqcc | 10.35 | 30.60 | 24.77 | 16-8000     | 96  |    Baseline !!!   |
 | GMM | mfcc | 14.14 | 33.08 |       | 16-8000     | 256 | |
