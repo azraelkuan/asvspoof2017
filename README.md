@@ -34,7 +34,7 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 | GMM | mfcc | 38.60 | 37.32 |       | 2000-4000   | 256 | |
 | GMM | mfcc | 6.86  | 27.60 |       | 4000-8000   | 256 | |
 | GMM | mfcc | **3.53**  | 25.55 |   | 6000-8000   | 256 | |
-| GMM | cqcc | 13.44 |       |       | 16-8000 | 256 | |
+| GMM | cqcc | 13.44 | 28.50 |       | 16-8000 | 256 | |
 | GMM | cqcc | 40.45 | 37.98 |       | 16-2000 | 256 | |
 | GMM | cqcc | 42.04 | 39.59 |       | 2000-4000 | 256 | |
 | GMM | cqcc | 7.61  | 27.49 |       | 4000-8000 | 256 | |
