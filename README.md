@@ -21,6 +21,7 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 |  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) |       Remarks        |
 | :------: | :-----: | :------: | :-------: | :-------: | :------------------: |
 | Baseline |  cqcc   |  10.35   |   30.60   |   24.77   |                      |
+| Baseline |  mfcc   |  15.19   |   33.39   |   27.48   |                      |
 |   DNN    |  cqcc   |  8.560   |  35.603   |           |                      |
 |   LCNN   |  cqcc   |  7.293   |  28.009   |           | lr 5e-4 bs 8 wd 1e-2 |
 |   LCNN   |   fft   |          |           |           |                      |
