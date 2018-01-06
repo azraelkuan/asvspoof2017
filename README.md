@@ -18,29 +18,28 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 
 > the column 5 use train and dev data to test the eval
 
-|  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) |       Remarks        |
-| :------: | :-----: | :------: | :-------: | :-------: | :------------------: |
-| GMM | cqcc | 10.35 | 30.60 | 24.77 |       Baseline !!!  Frequency Range 16-8000 B=96 |
-| GMM | mfcc | 14.14 | 33.08 |       | Frequency Range 16-8000 B=256 |
-| GMM | mfcc | 36.03 | 36.17 |       | Frequency Range 16-2000 B=256 |
-| GMM | mfcc | 38.60 | 37.32 |       | Frequency Range 2000-4000 B=256 |
-| GMM | mfcc | 6.86  | 27.60 |       | Frequency Range 4000-8000 B=256 |
-| GMM | mfcc | 3.53  | 25.55 |       | Frequency Range 6000-8000 B=256 |
-| GMM | cqcc | 13.44 |  |       | Frequency Range 16-8000 B=256 |
-| GMM | cqcc | 40.45 | 37.98 |       | Frequency Range 16-2000 B=256 |
-| GMM | cqcc | 42.04 | 39.59 |       | Frequency Range 2000-4000 B=256 |
-| GMM | cqcc | 7.61  | 27.49 |       | Frequency Range 4000-8000 B=256 |
-| GMM | cqcc | 4.82  | 20.30 |       | Frequency Range 6000-8000 B=256 |
-| GMM | cqcc | 4.99  | 18.05 |       | Frequency Range 6000-8000 B=512 |
-| GMM | cqcc | 6.63  | 18.58 |       | Frequency Range 6000-8000 B=512 |
-| GMM | cqcc | 7.15  | 19.99 |       | Frequency Range 7000-8000 B=256 |
-| GMM | cqcc | 7.56  | 18.07 |       | Frequency Range 7000-8000 B=512 |
-
-
-|   DNN    |  cqcc   |  8.560   |  35.603   |           |                      |
-|   LCNN   |  cqcc   |  7.293   |  28.009   |           | lr 5e-4 bs 8 wd 1e-2 |
-|   LCNN   |   fft   |          |           |           |                      |
-|   LCNN   |   db4   |          |           |           |                      |
+|  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) | Frequency Range | B | |       Remarks        |
+| :------: | :-----: | :------: | :-------: | :-------: | :-------: | :----: | :------------------: |
+| GMM | cqcc | 10.35 | 30.60 | 24.77 | 16-8000     | 96  |    Baseline !!!   |
+| GMM | mfcc | 14.14 | 33.08 |       | 16-8000     | 256 | |
+| GMM | mfcc | 36.03 | 36.17 |       | 16-2000     | 256 | |
+| GMM | mfcc | 38.60 | 37.32 |       | 2000-4000   | 256 | |
+| GMM | mfcc | 6.86  | 27.60 |       | 4000-8000   | 256 | |
+| GMM | mfcc | 3.53  | 25.55 |       | 6000-8000   | 256 | |
+| GMM | cqcc | 13.44 |  |       |16-8000 | 256 | |
+| GMM | cqcc | 40.45 | 37.98 |       | 16-2000 | 256 | |
+| GMM | cqcc | 42.04 | 39.59 |       | 2000-4000 | 256 | |
+| GMM | cqcc | 7.61  | 27.49 |       | 4000-8000 | 256 | |
+| GMM | cqcc | 4.82  | 20.30 |       | 6000-8000 | 256 | |
+| GMM | cqcc | 4.99  | 18.05 |       | 6000-8000 | 512 | |
+| GMM | cqcc | 6.63  | 18.58 |       | 6000-8000 | 512 | |
+| GMM | cqcc | 7.15  | 19.99 |       | 7000-8000 | 256 | |
+| GMM | cqcc | 7.56  | 18.07 |       | 7000-8000 | 512 | |
+| GMM | cqcc | 6.63  | 18.58 |       | 7000-8000 | 512 | |
+| DNN | cqcc | 8.56  |  35.603   |           |                      | |
+| LCNN | cqcc | 7.293 |  28.009   |           | | | lr 5e-4 bs 8 wd 1e-2  |
+| LCNN | fft |      |           |           |                      | | |
+| LCNN | db4 |      |           |           |                      | | |
 
 
 
