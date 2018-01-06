@@ -28,6 +28,7 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 > only one feature use in the gmm
 
 |  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) | Frequency Range | B | iter(default 100) |
+| :------: | :-----: | :------: | :-------: | :-------: | :-------: | :----: | :------------------: |
 | GMM | mfcc | 14.14 | 33.08 |       | 16-8000     | 256 | |
 | GMM | mfcc | 36.03 | 36.17 |       | 16-2000     | 256 | |
 | GMM | mfcc | 38.60 | 37.32 |       | 2000-4000   | 256 | |
@@ -53,6 +54,7 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 ### NNET
 
 |  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) | Frequency Range | B  |       Remarks         |
+| :------: | :-----: | :------: | :-------: | :-------: | :-------: | :----: | :------------------: |
 | DNN      | cqcc    | 8.56     |  35.603   |           |                 |    |                       |
 | LCNN     | cqcc    | 7.293    |  28.009   |           |                 |    | lr 5e-4 bs 8 wd 1e-2  |
 
