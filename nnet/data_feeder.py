@@ -5,6 +5,7 @@ from torch.utils.data import Dataset
 from tqdm import tqdm
 import scipy.io as scio
 import extract_feature
+from sklearn.preprocessing import scale
 
 rnn_max_frames = 700
 
@@ -42,7 +43,7 @@ def load_generael_label():
 # this will load data by frame
 def load_data(dataset, label_file, mode="train", feature_type="mfcc"):
     extend_num = 6
-    mat_pattern = "../../../data/asvspoof/{}_{}.mat"
+    mat_pattern = "../../../data/features/{}_{}.mat"
     if mode != "final":
         labels, wav_lists = load_label(label_file)
     else:
@@ -74,9 +75,10 @@ def load_data(dataset, label_file, mode="train", feature_type="mfcc"):
                 mat_path = mat_pattern.format(wav_id, feature_type)
                 tmp_data = scio.loadmat(mat_path)
                 feature = tmp_data['x']
-
-            # if feature_type == 'fft':
-                # extend_num = 2
+                # feature = feature[0:60, :]
+            
+            # feature = feature.T
+            # feature = scale(feature.T, with_mean=True, with_std=True)
             feature = np.pad(feature, [[0, 0], [extend_num - 1, extend_num - 1]], mode="edge")
             for i in range(extend_num-1, feature.shape[1] - extend_num):
                 tmp_feature = feature[:, i-extend_num+1:i+extend_num].reshape(-1)
@@ -160,7 +162,7 @@ class ASVDataSet(Dataset):
 
 
 def load_rnn_data(dataset, label_file, mode="train", feature_type="mfcc"):
-    mat_pattern = "../../../data/asvspoof/{}_{}.mat"
+    mat_pattern = "../../../data/features/{}_{}.mat"
     if mode != "final":
         labels, wav_lists = load_label(label_file)
     else:
@@ -216,7 +218,7 @@ def load_rnn_data(dataset, label_file, mode="train", feature_type="mfcc"):
 
 # this will load data by wav
 def load_cnn_data(dataset, label_file, mode="train", feature_type="mfcc"):
-    mat_pattern = "../../../data/asvspoof/{}_{}.mat"
+    mat_pattern = "../../../data/features/{}_{}.mat"
     if mode != "final":
         labels, wav_lists = load_label(label_file)
     else:
@@ -250,22 +252,29 @@ def load_cnn_data(dataset, label_file, mode="train", feature_type="mfcc"):
             mat_path = mat_pattern.format(wav_id, feature_type)
             tmp_data = scio.loadmat(mat_path)
             feature = tmp_data['x']
-
+        
+        feature = feature.T
+        feature = scale(feature, with_mean=True, with_std=False, copy=True)
+        # if feature_type == 'cqcc':
+        #     if feature.shape[0] < 400:
+        #         feature = np.pad(feature, [[0, 400 - feature.shape[0]], [0, 0]], mode='edge')
+        #     feature = feature[0:400, :]
+        #     final_data.append(feature)
         if feature_type == 'cqcc':
-            if feature.shape[1] < 300:
-                feature = np.pad(feature, [[0, 0], [0, 300 - feature.shape[1]]], mode='constant')
-            feature = feature[:, 0:300]
-            final_data.append(feature.T)
-        elif feature_type == "raw":
-            if feature.shape[0] < 50000:
-                feature = np.pad(feature, [0, 50000-feature.shape[0]], mode='constant')
-            feature = feature[0:50000]
+            if feature.shape[0] < 20:
+                feature = np.pad(feature, [[0, 20 - feature.shape[0]], [0, 0]], mode='edge')
+            feature = feature[0:20, :]
             final_data.append(feature)
+        # elif feature_type == "fft":
+        #     if feature.shape[0] < 400:
+        #         feature = np.pad(feature, [[0, 400 - feature.shape[0]], [0, 0]], mode='edge')
+        #     feature = feature[0:400, 0:864]
+        #     final_data.append(feature)
         else:
-            if feature.shape[1] < 300:
-                feature = np.pad(feature, [[0, 0], [0, 300 - feature.shape[1]]], mode='constant')
-            feature = feature[0:700, 0:300]
-            final_data.append(feature.T)
+            if feature.shape[0] < 500:
+                feature = np.pad(feature, [[0, 500 - feature.shape[0]], [0, 0]], mode='edge')
+            feature = feature[0:500, 0:501]
+            final_data.append(feature)
 
         final_label.append(label)
         final_wav_ids.append(wav_id)

@@ -1,0 +1,907 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+pathToDatabase =
+
+/mnt/speechlab/users/kc430/data/final_spoof/
+
+Extracting features for GENUINE training data...
+Starting parallel pool (parpool) using the 'local' profile ... connected to 12 workers.
+Done!
+Extracting features for SPOOF training data...
+Done!
+Training GMM for GENUINE...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 500
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 90
+vl_gmm: num. data points = 72875
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 3.35 s
+gmm: em: iteration 0: loglikelihood = -6785238.652573 (variation = inf)
+gmm: detected 23 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 1: loglikelihood = -5765884.660381 (variation = 1019353.992192)
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 2: loglikelihood = -5613826.551390 (variation = 152058.108991)
+gmm: sparsity of data posterior: 99.3%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 3: loglikelihood = -5558651.399023 (variation = 55175.152367)
+gmm: sparsity of data posterior: 99.3%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 4: loglikelihood = -5527501.697057 (variation = 31149.701966)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 5: loglikelihood = -5505288.516921 (variation = 22213.180136)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 6: loglikelihood = -5488367.807600 (variation = 16920.709321)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 7: loglikelihood = -5475589.276701 (variation = 12778.530899)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 8: loglikelihood = -5465781.242437 (variation = 9808.034264)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 9: loglikelihood = -5458473.975461 (variation = 7307.266976)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 10: loglikelihood = -5452788.719326 (variation = 5685.256135)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 11: loglikelihood = -5447901.889258 (variation = 4886.830069)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 12: loglikelihood = -5443146.651548 (variation = 4755.237710)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 13: loglikelihood = -5437479.255524 (variation = 5667.396023)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 14: loglikelihood = -5430235.876916 (variation = 7243.378609)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 15: loglikelihood = -5424940.523902 (variation = 5295.353013)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 16: loglikelihood = -5421857.570822 (variation = 3082.953080)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 17: loglikelihood = -5419636.262655 (variation = 2221.308167)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 18: loglikelihood = -5417811.347373 (variation = 1824.915282)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 19: loglikelihood = -5416290.465580 (variation = 1520.881793)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 20: loglikelihood = -5414927.931124 (variation = 1362.534456)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 21: loglikelihood = -5413614.377387 (variation = 1313.553737)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 22: loglikelihood = -5412339.228377 (variation = 1275.149009)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 23: loglikelihood = -5411012.461086 (variation = 1326.767291)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 24: loglikelihood = -5409823.344589 (variation = 1189.116497)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 25: loglikelihood = -5408801.498352 (variation = 1021.846237)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 26: loglikelihood = -5407873.181447 (variation = 928.316906)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 27: loglikelihood = -5407036.237477 (variation = 836.943970)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 28: loglikelihood = -5406287.815168 (variation = 748.422309)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 29: loglikelihood = -5405534.983402 (variation = 752.831766)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 30: loglikelihood = -5404840.704885 (variation = 694.278517)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 31: loglikelihood = -5404203.642492 (variation = 637.062393)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 32: loglikelihood = -5403587.772824 (variation = 615.869668)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 33: loglikelihood = -5402964.972880 (variation = 622.799944)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 34: loglikelihood = -5402285.331759 (variation = 679.641121)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 35: loglikelihood = -5401674.320171 (variation = 611.011588)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 36: loglikelihood = -5401100.893469 (variation = 573.426702)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 37: loglikelihood = -5400549.138253 (variation = 551.755217)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 38: loglikelihood = -5399993.794190 (variation = 555.344063)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 39: loglikelihood = -5399448.761453 (variation = 545.032736)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 40: loglikelihood = -5398908.572671 (variation = 540.188782)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 41: loglikelihood = -5398419.360132 (variation = 489.212539)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 42: loglikelihood = -5397902.790888 (variation = 516.569245)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 43: loglikelihood = -5397339.969803 (variation = 562.821085)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 44: loglikelihood = -5396812.984483 (variation = 526.985319)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 45: loglikelihood = -5396363.932777 (variation = 449.051706)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 46: loglikelihood = -5395985.040536 (variation = 378.892242)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 47: loglikelihood = -5395632.434442 (variation = 352.606094)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 48: loglikelihood = -5395290.212601 (variation = 342.221841)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 49: loglikelihood = -5394964.179409 (variation = 326.033192)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 50: loglikelihood = -5394642.726871 (variation = 321.452538)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 51: loglikelihood = -5394322.197431 (variation = 320.529440)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 52: loglikelihood = -5394015.321173 (variation = 306.876259)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 53: loglikelihood = -5393728.363036 (variation = 286.958137)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 54: loglikelihood = -5393456.313796 (variation = 272.049239)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 55: loglikelihood = -5393193.420109 (variation = 262.893688)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 56: loglikelihood = -5392928.252624 (variation = 265.167485)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 57: loglikelihood = -5392659.926109 (variation = 268.326515)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 58: loglikelihood = -5392400.763072 (variation = 259.163038)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 59: loglikelihood = -5392147.347891 (variation = 253.415180)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 60: loglikelihood = -5391892.547698 (variation = 254.800193)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 61: loglikelihood = -5391647.518213 (variation = 245.029485)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 62: loglikelihood = -5391415.838211 (variation = 231.680001)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 63: loglikelihood = -5391196.856212 (variation = 218.982000)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 64: loglikelihood = -5390981.558361 (variation = 215.297850)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 65: loglikelihood = -5390762.290553 (variation = 219.267808)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 66: loglikelihood = -5390553.361137 (variation = 208.929416)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 67: loglikelihood = -5390350.451397 (variation = 202.909740)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 68: loglikelihood = -5390160.670876 (variation = 189.780521)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 69: loglikelihood = -5389978.011835 (variation = 182.659041)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 70: loglikelihood = -5389812.584111 (variation = 165.427724)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 71: loglikelihood = -5389657.175115 (variation = 155.408996)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 72: loglikelihood = -5389506.687243 (variation = 150.487872)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 73: loglikelihood = -5389360.682085 (variation = 146.005158)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 74: loglikelihood = -5389222.259628 (variation = 138.422457)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 75: loglikelihood = -5389083.088849 (variation = 139.170780)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 76: loglikelihood = -5388948.600099 (variation = 134.488749)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 77: loglikelihood = -5388826.739286 (variation = 121.860813)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 78: loglikelihood = -5388703.850882 (variation = 122.888404)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 79: loglikelihood = -5388576.527491 (variation = 127.323391)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 80: loglikelihood = -5388447.184670 (variation = 129.342822)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 81: loglikelihood = -5388307.492300 (variation = 139.692370)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 82: loglikelihood = -5388186.947632 (variation = 120.544668)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 83: loglikelihood = -5388064.894005 (variation = 122.053627)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 84: loglikelihood = -5387940.178811 (variation = 124.715194)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 85: loglikelihood = -5387819.931838 (variation = 120.246973)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 86: loglikelihood = -5387704.084388 (variation = 115.847450)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 87: loglikelihood = -5387537.094566 (variation = 166.989822)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 88: loglikelihood = -5387194.637078 (variation = 342.457488)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 89: loglikelihood = -5386878.132198 (variation = 316.504880)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 90: loglikelihood = -5386703.382741 (variation = 174.749457)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 91: loglikelihood = -5386560.866718 (variation = 142.516022)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 92: loglikelihood = -5386425.313707 (variation = 135.553011)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 93: loglikelihood = -5386298.226869 (variation = 127.086838)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 94: loglikelihood = -5386171.003728 (variation = 127.223142)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 95: loglikelihood = -5386047.339381 (variation = 123.664347)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 96: loglikelihood = -5385929.432620 (variation = 117.906760)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 97: loglikelihood = -5385825.583606 (variation = 103.849014)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 98: loglikelihood = -5385735.630598 (variation = 89.953008)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 99: loglikelihood = -5385651.154904 (variation = 84.475693)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 100: loglikelihood = -5385566.242996 (variation = 84.911909)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 101: loglikelihood = -5385470.081936 (variation = 96.161060)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 102: loglikelihood = -5385369.241173 (variation = 100.840763)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 103: loglikelihood = -5385272.685799 (variation = 96.555374)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 104: loglikelihood = -5385177.192802 (variation = 95.492997)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 105: loglikelihood = -5385077.695046 (variation = 99.497755)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 106: loglikelihood = -5384977.991585 (variation = 99.703461)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 107: loglikelihood = -5384874.287647 (variation = 103.703938)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 108: loglikelihood = -5384768.594732 (variation = 105.692915)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 109: loglikelihood = -5384664.382356 (variation = 104.212376)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 110: loglikelihood = -5384556.597505 (variation = 107.784852)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 111: loglikelihood = -5384451.405506 (variation = 105.191999)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 112: loglikelihood = -5384354.682885 (variation = 96.722620)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 113: loglikelihood = -5384269.967254 (variation = 84.715631)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 114: loglikelihood = -5384181.891829 (variation = 88.075425)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 115: loglikelihood = -5384084.292192 (variation = 97.599637)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 116: loglikelihood = -5383994.542692 (variation = 89.749500)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 117: loglikelihood = -5383915.407401 (variation = 79.135291)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 118: loglikelihood = -5383844.316682 (variation = 71.090719)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 119: loglikelihood = -5383773.587450 (variation = 70.729232)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 120: loglikelihood = -5383709.443864 (variation = 64.143586)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 121: loglikelihood = -5383644.567715 (variation = 64.876149)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 122: loglikelihood = -5383582.188007 (variation = 62.379708)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 123: loglikelihood = -5383514.884398 (variation = 67.303609)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 124: loglikelihood = -5383446.959744 (variation = 67.924654)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 125: loglikelihood = -5383365.382476 (variation = 81.577268)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 126: loglikelihood = -5383275.337276 (variation = 90.045200)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 127: loglikelihood = -5383183.292268 (variation = 92.045008)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 128: loglikelihood = -5383095.704241 (variation = 87.588027)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 129: loglikelihood = -5383030.078102 (variation = 65.626140)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 130: loglikelihood = -5382968.688625 (variation = 61.389477)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 131: loglikelihood = -5382890.339619 (variation = 78.349006)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 132: loglikelihood = -5382811.835696 (variation = 78.503924)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 133: loglikelihood = -5382747.212274 (variation = 64.623422)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 134: loglikelihood = -5382680.769202 (variation = 66.443072)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 135: loglikelihood = -5382618.811803 (variation = 61.957399)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 136: loglikelihood = -5382555.791430 (variation = 63.020373)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 137: loglikelihood = -5382495.478242 (variation = 60.313188)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 138: loglikelihood = -5382422.041639 (variation = 73.436603)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 139: loglikelihood = -5382355.482799 (variation = 66.558841)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 140: loglikelihood = -5382294.327057 (variation = 61.155742)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 141: loglikelihood = -5382229.968601 (variation = 64.358456)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 142: loglikelihood = -5382163.879238 (variation = 66.089363)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 143: loglikelihood = -5382095.909667 (variation = 67.969571)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 144: loglikelihood = -5382024.278436 (variation = 71.631231)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 145: loglikelihood = -5381954.334184 (variation = 69.944251)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 146: loglikelihood = -5381878.826165 (variation = 75.508020)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 147: loglikelihood = -5381796.241871 (variation = 82.584293)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 148: loglikelihood = -5381709.037934 (variation = 87.203937)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 149: loglikelihood = -5381612.163947 (variation = 96.873987)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 150: loglikelihood = -5381510.238381 (variation = 101.925567)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 151: loglikelihood = -5381409.580691 (variation = 100.657690)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 152: loglikelihood = -5381312.659242 (variation = 96.921449)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 153: loglikelihood = -5381218.531088 (variation = 94.128154)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 154: loglikelihood = -5381120.555507 (variation = 97.975581)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 155: loglikelihood = -5381013.172061 (variation = 107.383446)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 156: loglikelihood = -5380939.215319 (variation = 73.956742)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 157: loglikelihood = -5380882.282092 (variation = 56.933226)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 52 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 158: loglikelihood = -5380830.925612 (variation = 51.356481)
+gmm: em: terminating because the algorithm fully converged (log-likelihood variation = 0.000010).
+gmm: optimization terminated in 560.20 s with loglikelihood -5380830.925612
+gmm: all repetitions terminated with final loglikelihood -5380830.925612
+Done!
+Training GMM for SPOOF...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 500
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 90
+vl_gmm: num. data points = 74022
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 3.39 s
+gmm: em: iteration 0: loglikelihood = -6782638.334558 (variation = inf)
+gmm: detected 5 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 1: loglikelihood = -5570777.247967 (variation = 1211861.086592)
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 2: loglikelihood = -5392265.383740 (variation = 178511.864226)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 3: loglikelihood = -5314547.304254 (variation = 77718.079486)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 4: loglikelihood = -5269424.675726 (variation = 45122.628529)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 5: loglikelihood = -5238976.785350 (variation = 30447.890376)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 6: loglikelihood = -5219271.324335 (variation = 19705.461015)
+gmm: sparsity of data posterior: 99.5%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 7: loglikelihood = -5205194.841688 (variation = 14076.482647)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 8: loglikelihood = -5193894.957940 (variation = 11299.883747)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 9: loglikelihood = -5185037.928740 (variation = 8857.029200)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 10: loglikelihood = -5177521.098344 (variation = 7516.830396)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 11: loglikelihood = -5170844.867772 (variation = 6676.230572)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 12: loglikelihood = -5165016.367213 (variation = 5828.500558)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 13: loglikelihood = -5160025.486123 (variation = 4990.881091)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 14: loglikelihood = -5155727.603291 (variation = 4297.882832)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 15: loglikelihood = -5152202.343025 (variation = 3525.260266)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 16: loglikelihood = -5149540.992958 (variation = 2661.350066)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 17: loglikelihood = -5147193.199581 (variation = 2347.793377)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 18: loglikelihood = -5144978.168116 (variation = 2215.031465)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 19: loglikelihood = -5142930.213255 (variation = 2047.954862)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 20: loglikelihood = -5141222.020346 (variation = 1708.192909)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 21: loglikelihood = -5139597.516881 (variation = 1624.503465)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 22: loglikelihood = -5138078.930174 (variation = 1518.586707)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 23: loglikelihood = -5136585.120628 (variation = 1493.809546)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 24: loglikelihood = -5135232.210998 (variation = 1352.909630)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 25: loglikelihood = -5133936.090194 (variation = 1296.120804)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 26: loglikelihood = -5132986.066129 (variation = 950.024065)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 27: loglikelihood = -5132092.322111 (variation = 893.744018)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 28: loglikelihood = -5131293.488156 (variation = 798.833955)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 29: loglikelihood = -5130480.501806 (variation = 812.986350)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 30: loglikelihood = -5129603.126541 (variation = 877.375265)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 31: loglikelihood = -5128726.267734 (variation = 876.858808)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 32: loglikelihood = -5127812.235144 (variation = 914.032590)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 33: loglikelihood = -5126846.136142 (variation = 966.099002)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 34: loglikelihood = -5125921.757574 (variation = 924.378568)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 35: loglikelihood = -5125249.734939 (variation = 672.022634)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 36: loglikelihood = -5124663.116889 (variation = 586.618050)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 37: loglikelihood = -5124051.649951 (variation = 611.466938)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 38: loglikelihood = -5123376.179381 (variation = 675.470570)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 39: loglikelihood = -5122708.550346 (variation = 667.629035)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 40: loglikelihood = -5122119.576735 (variation = 588.973612)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 41: loglikelihood = -5121560.993617 (variation = 558.583117)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 42: loglikelihood = -5121034.142673 (variation = 526.850944)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 43: loglikelihood = -5120513.619611 (variation = 520.523063)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 44: loglikelihood = -5120063.444703 (variation = 450.174908)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 45: loglikelihood = -5119647.898322 (variation = 415.546381)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 46: loglikelihood = -5119279.870796 (variation = 368.027526)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 47: loglikelihood = -5118921.502797 (variation = 358.367999)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 48: loglikelihood = -5118527.664707 (variation = 393.838090)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 49: loglikelihood = -5118106.932808 (variation = 420.731900)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 50: loglikelihood = -5117718.657252 (variation = 388.275556)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 51: loglikelihood = -5117374.759782 (variation = 343.897470)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 52: loglikelihood = -5117038.936915 (variation = 335.822867)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 53: loglikelihood = -5116597.189525 (variation = 441.747390)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 54: loglikelihood = -5116264.943537 (variation = 332.245988)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 55: loglikelihood = -5115974.311839 (variation = 290.631698)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 56: loglikelihood = -5115716.310231 (variation = 258.001607)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 57: loglikelihood = -5115447.620088 (variation = 268.690143)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 58: loglikelihood = -5115176.070408 (variation = 271.549680)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 59: loglikelihood = -5114887.582414 (variation = 288.487994)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 60: loglikelihood = -5114563.422231 (variation = 324.160183)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 61: loglikelihood = -5114318.941583 (variation = 244.480648)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 62: loglikelihood = -5114101.884472 (variation = 217.057111)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 63: loglikelihood = -5113886.201893 (variation = 215.682579)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 64: loglikelihood = -5113699.188276 (variation = 187.013617)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 65: loglikelihood = -5113540.478393 (variation = 158.709883)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 66: loglikelihood = -5113375.107424 (variation = 165.370969)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 67: loglikelihood = -5113201.005822 (variation = 174.101603)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 68: loglikelihood = -5113015.242183 (variation = 185.763638)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 69: loglikelihood = -5112811.704202 (variation = 203.537982)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 70: loglikelihood = -5112619.519864 (variation = 192.184338)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 71: loglikelihood = -5112419.701583 (variation = 199.818281)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 72: loglikelihood = -5112221.843892 (variation = 197.857691)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 73: loglikelihood = -5112028.210550 (variation = 193.633342)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 74: loglikelihood = -5111808.115621 (variation = 220.094929)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 75: loglikelihood = -5111521.953119 (variation = 286.162502)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 76: loglikelihood = -5111120.122299 (variation = 401.830820)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 77: loglikelihood = -5110878.357187 (variation = 241.765111)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 78: loglikelihood = -5110701.839384 (variation = 176.517804)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 79: loglikelihood = -5110564.823953 (variation = 137.015431)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 80: loglikelihood = -5110435.603759 (variation = 129.220194)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 81: loglikelihood = -5110309.511642 (variation = 126.092117)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 82: loglikelihood = -5110196.718906 (variation = 112.792736)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 83: loglikelihood = -5110075.528390 (variation = 121.190516)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 84: loglikelihood = -5109917.055629 (variation = 158.472762)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 85: loglikelihood = -5109798.259857 (variation = 118.795772)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 86: loglikelihood = -5109672.824316 (variation = 125.435541)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 87: loglikelihood = -5109531.096766 (variation = 141.727549)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 88: loglikelihood = -5109432.853246 (variation = 98.243520)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 89: loglikelihood = -5109341.268854 (variation = 91.584393)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 90: loglikelihood = -5109235.023881 (variation = 106.244972)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 91: loglikelihood = -5109148.523469 (variation = 86.500412)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 92: loglikelihood = -5109077.412194 (variation = 71.111275)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 93: loglikelihood = -5109005.380840 (variation = 72.031355)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 94: loglikelihood = -5108931.173120 (variation = 74.207720)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 95: loglikelihood = -5108855.052240 (variation = 76.120880)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 96: loglikelihood = -5108752.996892 (variation = 102.055348)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 97: loglikelihood = -5108690.125217 (variation = 62.871675)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 98: loglikelihood = -5108621.554793 (variation = 68.570424)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 99: loglikelihood = -5108550.039691 (variation = 71.515101)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 100: loglikelihood = -5108466.127882 (variation = 83.911809)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 101: loglikelihood = -5108386.948700 (variation = 79.179183)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 102: loglikelihood = -5108321.824070 (variation = 65.124630)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 103: loglikelihood = -5108249.628464 (variation = 72.195606)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 104: loglikelihood = -5108188.201295 (variation = 61.427169)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 105: loglikelihood = -5108118.112687 (variation = 70.088608)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 106: loglikelihood = -5107972.060396 (variation = 146.052292)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 107: loglikelihood = -5107734.377640 (variation = 237.682755)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 108: loglikelihood = -5107575.293009 (variation = 159.084631)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 109: loglikelihood = -5107419.970800 (variation = 155.322209)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 110: loglikelihood = -5107202.754347 (variation = 217.216453)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 111: loglikelihood = -5107103.336068 (variation = 99.418278)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 112: loglikelihood = -5107006.882261 (variation = 96.453808)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 113: loglikelihood = -5106920.660939 (variation = 86.221322)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 114: loglikelihood = -5106832.269347 (variation = 88.391592)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 115: loglikelihood = -5106746.397486 (variation = 85.871861)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 116: loglikelihood = -5106667.737041 (variation = 78.660446)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 117: loglikelihood = -5106601.265246 (variation = 66.471794)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 118: loglikelihood = -5106527.926730 (variation = 73.338516)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 119: loglikelihood = -5106450.479835 (variation = 77.446896)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 120: loglikelihood = -5106384.360676 (variation = 66.119158)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 121: loglikelihood = -5106328.235115 (variation = 56.125562)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 122: loglikelihood = -5106275.198404 (variation = 53.036710)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 123: loglikelihood = -5106217.732808 (variation = 57.465596)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 124: loglikelihood = -5106161.821053 (variation = 55.911755)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 125: loglikelihood = -5106096.772436 (variation = 65.048617)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 126: loglikelihood = -5106043.137729 (variation = 53.634707)
+gmm: sparsity of data posterior: 99.6%
+gmm: detected 17 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 127: loglikelihood = -5105993.819601 (variation = 49.318128)
+gmm: em: terminating because the algorithm fully converged (log-likelihood variation = 0.000010).
+gmm: optimization terminated in 448.92 s with loglikelihood -5105993.819601
+gmm: all repetitions terminated with final loglikelihood -5105993.819601
+Done!
+Computing scores for eval trials...
+Done!
+EER is 17.59
+>> 

@@ -1,0 +1,329 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+pathToDatabase =
+
+/mnt/speechlab/users/hedi7/data/ASVspoof2017/
+
+Extracting features for GENUINE training data...
+Starting parallel pool (parpool) using the 'local' profile ... connected to 12 workers.
+Done!
+Extracting features for SPOOF training data...
+Done!
+Training GMM for GENUINE...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 100
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 90
+vl_gmm: num. data points = 50682
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 2.35 s
+gmm: em: iteration 0: loglikelihood = -16132308.689807 (variation = inf)
+gmm: em: iteration 1: loglikelihood = -15159566.800245 (variation = 972741.889562)
+gmm: em: iteration 2: loglikelihood = -14964284.429059 (variation = 195282.371186)
+gmm: sparsity of data posterior: 99.6%
+gmm: em: iteration 3: loglikelihood = -14889739.113208 (variation = 74545.315851)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 4: loglikelihood = -14854978.613931 (variation = 34760.499276)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 5: loglikelihood = -14835467.447826 (variation = 19511.166106)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 6: loglikelihood = -14821187.653875 (variation = 14279.793951)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 7: loglikelihood = -14810444.644718 (variation = 10743.009157)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 8: loglikelihood = -14802529.239760 (variation = 7915.404958)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 9: loglikelihood = -14796315.566268 (variation = 6213.673492)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 10: loglikelihood = -14791206.645334 (variation = 5108.920934)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 11: loglikelihood = -14786829.729475 (variation = 4376.915859)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 12: loglikelihood = -14782876.671646 (variation = 3953.057829)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 13: loglikelihood = -14779276.038999 (variation = 3600.632647)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 14: loglikelihood = -14776209.236758 (variation = 3066.802241)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 15: loglikelihood = -14773680.185984 (variation = 2529.050774)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 16: loglikelihood = -14771397.046585 (variation = 2283.139399)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 17: loglikelihood = -14769370.759996 (variation = 2026.286589)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 18: loglikelihood = -14767441.916947 (variation = 1928.843049)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 19: loglikelihood = -14765463.773784 (variation = 1978.143163)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 20: loglikelihood = -14763687.351499 (variation = 1776.422284)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 21: loglikelihood = -14762232.544202 (variation = 1454.807298)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 22: loglikelihood = -14760992.812864 (variation = 1239.731338)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 23: loglikelihood = -14759896.619969 (variation = 1096.192895)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 24: loglikelihood = -14758936.767011 (variation = 959.852958)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 25: loglikelihood = -14757965.824637 (variation = 970.942374)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 26: loglikelihood = -14757123.049797 (variation = 842.774840)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 27: loglikelihood = -14756358.465715 (variation = 764.584082)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 28: loglikelihood = -14755596.379142 (variation = 762.086573)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 29: loglikelihood = -14754798.792230 (variation = 797.586911)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 30: loglikelihood = -14754044.341236 (variation = 754.450994)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 31: loglikelihood = -14753416.236299 (variation = 628.104937)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 32: loglikelihood = -14752837.423501 (variation = 578.812798)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 33: loglikelihood = -14752284.993455 (variation = 552.430045)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 34: loglikelihood = -14751769.153998 (variation = 515.839457)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 35: loglikelihood = -14751277.784617 (variation = 491.369382)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 36: loglikelihood = -14750811.055622 (variation = 466.728995)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 37: loglikelihood = -14750316.022248 (variation = 495.033374)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 38: loglikelihood = -14749843.290490 (variation = 472.731758)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 39: loglikelihood = -14749400.408880 (variation = 442.881610)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 40: loglikelihood = -14748951.733548 (variation = 448.675332)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 41: loglikelihood = -14748468.283971 (variation = 483.449576)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 42: loglikelihood = -14747920.568126 (variation = 547.715845)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 43: loglikelihood = -14747496.855095 (variation = 423.713031)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 44: loglikelihood = -14747126.264265 (variation = 370.590830)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 45: loglikelihood = -14746835.091350 (variation = 291.172915)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 46: loglikelihood = -14746560.664163 (variation = 274.427187)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 47: loglikelihood = -14746240.898527 (variation = 319.765635)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 48: loglikelihood = -14745936.138521 (variation = 304.760006)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 49: loglikelihood = -14745613.929085 (variation = 322.209436)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 50: loglikelihood = -14745315.634200 (variation = 298.294885)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 51: loglikelihood = -14745028.885862 (variation = 286.748337)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 52: loglikelihood = -14744751.301537 (variation = 277.584325)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 53: loglikelihood = -14744462.125976 (variation = 289.175561)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 54: loglikelihood = -14744124.793059 (variation = 337.332917)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 55: loglikelihood = -14743744.338607 (variation = 380.454452)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 56: loglikelihood = -14743399.644197 (variation = 344.694410)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 57: loglikelihood = -14743115.477431 (variation = 284.166766)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 58: loglikelihood = -14742866.420767 (variation = 249.056664)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 59: loglikelihood = -14742639.715334 (variation = 226.705433)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 60: loglikelihood = -14742412.730092 (variation = 226.985241)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 61: loglikelihood = -14742190.103320 (variation = 222.626772)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 62: loglikelihood = -14741946.492102 (variation = 243.611218)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 63: loglikelihood = -14741638.990951 (variation = 307.501151)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 64: loglikelihood = -14741268.890086 (variation = 370.100865)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 65: loglikelihood = -14740943.735318 (variation = 325.154769)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 66: loglikelihood = -14740701.999833 (variation = 241.735484)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 67: loglikelihood = -14740491.662532 (variation = 210.337301)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 68: loglikelihood = -14740313.131388 (variation = 178.531144)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 69: loglikelihood = -14740170.940213 (variation = 142.191175)
+gmm: em: terminating because the algorithm fully converged (log-likelihood variation = 0.000010).
+gmm: optimization terminated in 311.53 s with loglikelihood -14740170.940213
+gmm: all repetitions terminated with final loglikelihood -14740170.940213
+Done!
+Training GMM for SPOOF...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 100
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 90
+vl_gmm: num. data points = 45965
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 1.66 s
+gmm: em: iteration 0: loglikelihood = -14500660.090252 (variation = inf)
+gmm: em: iteration 1: loglikelihood = -13648216.398943 (variation = 852443.691309)
+gmm: em: iteration 2: loglikelihood = -13524526.837359 (variation = 123689.561583)
+gmm: sparsity of data posterior: 99.6%
+gmm: em: iteration 3: loglikelihood = -13479206.147007 (variation = 45320.690352)
+gmm: sparsity of data posterior: 99.6%
+gmm: em: iteration 4: loglikelihood = -13455309.122154 (variation = 23897.024853)
+gmm: sparsity of data posterior: 99.6%
+gmm: em: iteration 5: loglikelihood = -13440624.775993 (variation = 14684.346161)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 6: loglikelihood = -13430314.623446 (variation = 10310.152547)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 7: loglikelihood = -13423052.172803 (variation = 7262.450644)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 8: loglikelihood = -13417678.353231 (variation = 5373.819572)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 9: loglikelihood = -13413186.195710 (variation = 4492.157521)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 10: loglikelihood = -13409629.351297 (variation = 3556.844413)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 11: loglikelihood = -13406665.714732 (variation = 2963.636565)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 12: loglikelihood = -13404112.149406 (variation = 2553.565326)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 13: loglikelihood = -13401944.888305 (variation = 2167.261102)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 14: loglikelihood = -13400051.105910 (variation = 1893.782395)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 15: loglikelihood = -13398459.004031 (variation = 1592.101879)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 16: loglikelihood = -13397046.355952 (variation = 1412.648079)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 17: loglikelihood = -13395741.421901 (variation = 1304.934051)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 18: loglikelihood = -13394461.052308 (variation = 1280.369592)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 19: loglikelihood = -13393179.492496 (variation = 1281.559812)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 20: loglikelihood = -13391999.606910 (variation = 1179.885586)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 21: loglikelihood = -13390973.777261 (variation = 1025.829650)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 22: loglikelihood = -13390084.764498 (variation = 889.012763)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 23: loglikelihood = -13389295.871738 (variation = 788.892760)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 24: loglikelihood = -13388549.261884 (variation = 746.609854)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 25: loglikelihood = -13387771.954098 (variation = 777.307785)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 26: loglikelihood = -13387034.986851 (variation = 736.967247)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 27: loglikelihood = -13386344.495837 (variation = 690.491014)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 28: loglikelihood = -13385666.606400 (variation = 677.889437)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 29: loglikelihood = -13385018.712595 (variation = 647.893805)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 30: loglikelihood = -13384450.628244 (variation = 568.084351)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 31: loglikelihood = -13383937.642198 (variation = 512.986046)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 32: loglikelihood = -13383462.422095 (variation = 475.220103)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 33: loglikelihood = -13383005.088494 (variation = 457.333601)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 34: loglikelihood = -13382572.303743 (variation = 432.784751)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 35: loglikelihood = -13382169.371561 (variation = 402.932182)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 36: loglikelihood = -13381772.238857 (variation = 397.132704)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 37: loglikelihood = -13381378.771797 (variation = 393.467059)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 38: loglikelihood = -13381010.633310 (variation = 368.138487)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 39: loglikelihood = -13380681.458045 (variation = 329.175265)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 40: loglikelihood = -13380390.828703 (variation = 290.629342)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 41: loglikelihood = -13380107.925217 (variation = 282.903486)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 42: loglikelihood = -13379849.415636 (variation = 258.509580)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 43: loglikelihood = -13379553.423305 (variation = 295.992331)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 44: loglikelihood = -13379283.156858 (variation = 270.266447)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 45: loglikelihood = -13379041.438386 (variation = 241.718472)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 46: loglikelihood = -13378800.520457 (variation = 240.917929)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 47: loglikelihood = -13378585.748724 (variation = 214.771733)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 48: loglikelihood = -13378374.494330 (variation = 211.254394)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 49: loglikelihood = -13378139.463565 (variation = 235.030765)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 50: loglikelihood = -13377925.932101 (variation = 213.531463)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 51: loglikelihood = -13377723.963395 (variation = 201.968706)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 52: loglikelihood = -13377519.079439 (variation = 204.883956)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 53: loglikelihood = -13377309.632576 (variation = 209.446863)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 54: loglikelihood = -13377108.520461 (variation = 201.112115)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 55: loglikelihood = -13376930.215592 (variation = 178.304869)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 56: loglikelihood = -13376760.061551 (variation = 170.154041)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 57: loglikelihood = -13376568.329401 (variation = 191.732149)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 58: loglikelihood = -13376395.395830 (variation = 172.933571)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 59: loglikelihood = -13376222.532559 (variation = 172.863271)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 60: loglikelihood = -13376051.757415 (variation = 170.775145)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 61: loglikelihood = -13375884.083146 (variation = 167.674268)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 62: loglikelihood = -13375713.956717 (variation = 170.126430)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 63: loglikelihood = -13375544.466028 (variation = 169.490689)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 64: loglikelihood = -13375391.450285 (variation = 153.015743)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 65: loglikelihood = -13375223.070912 (variation = 168.379373)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 66: loglikelihood = -13375024.137515 (variation = 198.933398)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 67: loglikelihood = -13374860.632850 (variation = 163.504665)
+gmm: sparsity of data posterior: 99.7%
+gmm: em: iteration 68: loglikelihood = -13374731.734210 (variation = 128.898640)
+gmm: em: terminating because the algorithm fully converged (log-likelihood variation = 0.000010).
+gmm: optimization terminated in 171.48 s with loglikelihood -13374731.734210
+gmm: all repetitions terminated with final loglikelihood -13374731.734210
+Done!
+Computing scores for development trials...
+Done!
+EER is 40.45
+Computing scores for eval trials...
+Done!
+EER is 37.98
+>> 

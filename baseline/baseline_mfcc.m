@@ -20,14 +20,16 @@ addpath(genpath('voicebox'));
 
 % set paths to the wave files and protocols
 %pathToDatabase = fullfile('..','ASVspoof2017_train_dev','wav');
-pathToDatabase = '/speechlab/users/hedi7/data/ASVspoof2017/'
+pathToDatabase = '/mnt/speechlab/users/hedi7/data/ASVspoof2017/'
 trainProtocolFile = fullfile(pathToDatabase, 'protocol', 'ASVspoof2017_train.trn.txt');
 devProtocolFile = fullfile(pathToDatabase, 'protocol', 'ASVspoof2017_dev.trl.txt');
 evaProtocolFile = fullfile(pathToDatabase, 'protocol', 'ASVspoof2017_eval_v2_key.trl.txt');
 
-frame_length = 0.02; %20ms
+frame_length = 0.025; %20ms
 frame_hop = 0.01; %10ms
-n_MFCC = 13; %number of cepstral coefficients excluding 0'th coefficient [default 19]
+n_MFCC = 19; %number of cepstral coefficients excluding 0'th coefficient [default 19]
+fl=0.002;
+fh=0.125;
 
 % read train protocol
 fileID = fopen(trainProtocolFile);
@@ -52,9 +54,9 @@ parfor i=1:length(genuineIdx)
     save_path = strcat('./features/', save_name);
     filePath = fullfile(pathToDatabase,'ASVspoof2017_train',filelist{genuineIdx(i)});
     [x,fs] = audioread(filePath);
-    tmp_fea = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs)';
+    tmp_fea = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
     genuineFeatureCell{i} = tmp_fea
-    parsave(save_path, tmp_fea)
+    % parsave(save_path, tmp_fea)
 end
 disp('Done!');
 
@@ -66,9 +68,9 @@ parfor i=1:length(spoofIdx)
     save_path = strcat('./features/', save_name);
     filePath = fullfile(pathToDatabase,'ASVspoof2017_train',filelist{spoofIdx(i)});
     [x,fs] = audioread(filePath);
-    tmp_fea = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs)';
+    tmp_fea = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
     spoofFeatureCell{i} = tmp_fea
-    parsave(save_path, tmp_fea)
+    % parsave(save_path, tmp_fea)
 end
 disp('Done!');
 
@@ -106,10 +108,10 @@ parfor i=1:length(filelist)
     filePath = fullfile(pathToDatabase,'ASVspoof2017_dev',filelist{i});
     [x,fs] = audioread(filePath);
     % featrue extraction
-    tmp_fea = melcepst(x,fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs)';
+    tmp_fea = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
 
     x_mfcc = tmp_fea
-    parsave(save_path, tmp_fea)
+    % parsave(save_path, tmp_fea)
 
     %score computation
     llk_genuine = mean(compute_llk(x_mfcc,genuineGMM.m,genuineGMM.s,genuineGMM.w));
@@ -143,9 +145,9 @@ parfor i=1:length(filelist)
     filePath = fullfile(pathToDatabase,'ASVspoof2017_eval',filelist{i});
     [x,fs] = audioread(filePath);
     % featrue extraction
-    tmp_fea = melcepst(x,fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs)';
+    tmp_fea = melcepst(x,fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
     x_mfcc = tmp_fea
-    parsave(save_path, tmp_fea)
+    % parsave(save_path, tmp_fea)
 
     %score computation
     llk_genuine = mean(compute_llk(x_mfcc,genuineGMM.m,genuineGMM.s,genuineGMM.w));

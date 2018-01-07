@@ -1,0 +1,777 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+Warning: X does not support locale en_HK.UTF-8
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+pathToDatabase =
+
+/mnt/speechlab/users/hedi7/data/ASVspoof2017/
+
+Extracting features for GENUINE training data...
+Starting parallel pool (parpool) using the 'local' profile ... [Warning: The system time zone setting, 'CST', does not specify a single time
+zone unambiguously. It will be treated as 'America/Chicago'. See the <a
+href="matlab:doc('datetime.TimeZone')">datetime.TimeZone property</a> for
+details about specifying time zones.] 
+[> In verifyTimeZone (line 23)
+  In datetime (line 503)
+  In parallel.internal.cluster.DefaultProperties.getNewJobPropStruct (line 16)
+  In parallel.internal.cluster.CJSSupport/buildJob (line 151)
+  In parallel.cluster.CJSCluster/buildCommunicatingJob (line 452)
+  In parallel.Cluster/createCommunicatingJob (line 89)
+  In parallel.internal.pool.InteractiveClient>iCreateCommunicatingJob (line 714)
+  In parallel.internal.pool.InteractiveClient/start (line 325)
+  In parallel.Pool>iStartClient (line 567)
+  In parallel.Pool.hBuildPool (line 446)
+  In parallel.internal.pool.doParpool (line 15)
+  In parpool (line 89)
+  In parallel.internal.pool.PoolArrayManager.getOrAutoCreateWithCleanup (line 49)
+  In pctTryCreatePoolIfNecessary (line 23)
+  In distcomp.remoteparfor.tryRemoteParfor
+  In parallel_function (line 433)
+  In baseline_mfcc (line 52)] 
+connected to 12 workers.
+Done!
+Extracting features for SPOOF training data...
+Done!
+Training GMM for GENUINE...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 100
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 60
+vl_gmm: num. data points = 417193
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 25.80 s
+gmm: em: iteration 0: loglikelihood = 10802897.430329 (variation = inf)
+gmm: detected 9 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 1: loglikelihood = 15553953.357304 (variation = 4751055.926975)
+gmm: detected 9 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 2: loglikelihood = 16566048.342340 (variation = 1012094.985036)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 3: loglikelihood = 16902431.762160 (variation = 336383.419820)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 4: loglikelihood = 17059686.904504 (variation = 157255.142344)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 5: loglikelihood = 17156514.499855 (variation = 96827.595351)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 6: loglikelihood = 17221616.793761 (variation = 65102.293907)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 7: loglikelihood = 17267996.321556 (variation = 46379.527794)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 8: loglikelihood = 17303515.496872 (variation = 35519.175317)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 9: loglikelihood = 17332045.838992 (variation = 28530.342119)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 10: loglikelihood = 17355860.332638 (variation = 23814.493646)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 11: loglikelihood = 17376493.200708 (variation = 20632.868070)
+gmm: sparsity of data posterior: 99.4%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 12: loglikelihood = 17394483.347482 (variation = 17990.146774)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 13: loglikelihood = 17410297.726724 (variation = 15814.379242)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 14: loglikelihood = 17424175.976231 (variation = 13878.249506)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 15: loglikelihood = 17436117.930981 (variation = 11941.954750)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 16: loglikelihood = 17445674.514127 (variation = 9556.583146)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 17: loglikelihood = 17453642.784522 (variation = 7968.270396)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 18: loglikelihood = 17460635.525598 (variation = 6992.741075)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 19: loglikelihood = 17466875.186235 (variation = 6239.660637)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 20: loglikelihood = 17472342.455136 (variation = 5467.268901)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 21: loglikelihood = 17477072.373920 (variation = 4729.918784)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 22: loglikelihood = 17481141.529906 (variation = 4069.155986)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 23: loglikelihood = 17484651.951002 (variation = 3510.421096)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 24: loglikelihood = 17487735.361728 (variation = 3083.410726)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 25: loglikelihood = 17490531.907532 (variation = 2796.545804)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 26: loglikelihood = 17493145.620424 (variation = 2613.712892)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 27: loglikelihood = 17495617.486640 (variation = 2471.866216)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 28: loglikelihood = 17497956.317019 (variation = 2338.830379)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 29: loglikelihood = 17500170.861992 (variation = 2214.544973)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 30: loglikelihood = 17502270.723691 (variation = 2099.861700)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 31: loglikelihood = 17504267.822395 (variation = 1997.098704)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 32: loglikelihood = 17506178.623152 (variation = 1910.800757)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 33: loglikelihood = 17508005.494043 (variation = 1826.870891)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 34: loglikelihood = 17509753.620885 (variation = 1748.126842)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 35: loglikelihood = 17511421.067474 (variation = 1667.446588)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 36: loglikelihood = 17513011.104291 (variation = 1590.036818)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 37: loglikelihood = 17514517.480890 (variation = 1506.376599)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 38: loglikelihood = 17515894.654010 (variation = 1377.173120)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 39: loglikelihood = 17517130.028924 (variation = 1235.374914)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 40: loglikelihood = 17518250.617666 (variation = 1120.588742)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 41: loglikelihood = 17519283.201098 (variation = 1032.583432)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 42: loglikelihood = 17520250.790719 (variation = 967.589620)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 43: loglikelihood = 17521167.522639 (variation = 916.731920)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 44: loglikelihood = 17522044.272456 (variation = 876.749817)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 45: loglikelihood = 17522887.190796 (variation = 842.918340)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 46: loglikelihood = 17523698.732512 (variation = 811.541716)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 47: loglikelihood = 17524482.226929 (variation = 783.494417)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 48: loglikelihood = 17525235.046964 (variation = 752.820035)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 49: loglikelihood = 17525961.703781 (variation = 726.656817)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 50: loglikelihood = 17526659.949210 (variation = 698.245429)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 51: loglikelihood = 17527326.480747 (variation = 666.531538)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 52: loglikelihood = 17527963.223377 (variation = 636.742630)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 53: loglikelihood = 17528572.298142 (variation = 609.074765)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 54: loglikelihood = 17529154.363550 (variation = 582.065408)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 55: loglikelihood = 17529712.952714 (variation = 558.589164)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 56: loglikelihood = 17530252.595999 (variation = 539.643285)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 57: loglikelihood = 17530779.549506 (variation = 526.953507)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 58: loglikelihood = 17531303.181917 (variation = 523.632410)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 59: loglikelihood = 17531830.698413 (variation = 527.516497)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 60: loglikelihood = 17532354.448701 (variation = 523.750288)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 61: loglikelihood = 17532874.077566 (variation = 519.628865)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 62: loglikelihood = 17533390.636992 (variation = 516.559425)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 63: loglikelihood = 17533898.811854 (variation = 508.174863)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 64: loglikelihood = 17534401.526562 (variation = 502.714708)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 65: loglikelihood = 17534896.010468 (variation = 494.483906)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 66: loglikelihood = 17535382.826664 (variation = 486.816195)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 67: loglikelihood = 17535858.512764 (variation = 475.686100)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 68: loglikelihood = 17536321.973969 (variation = 463.461205)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 69: loglikelihood = 17536777.772687 (variation = 455.798718)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 70: loglikelihood = 17537225.484578 (variation = 447.711891)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 71: loglikelihood = 17537666.070158 (variation = 440.585580)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 72: loglikelihood = 17538099.479615 (variation = 433.409457)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 73: loglikelihood = 17538521.048923 (variation = 421.569308)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 74: loglikelihood = 17538925.373478 (variation = 404.324556)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 75: loglikelihood = 17539310.128196 (variation = 384.754718)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 76: loglikelihood = 17539673.525928 (variation = 363.397731)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 77: loglikelihood = 17540017.090081 (variation = 343.564153)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 78: loglikelihood = 17540346.027898 (variation = 328.937817)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 79: loglikelihood = 17540666.644857 (variation = 320.616958)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 80: loglikelihood = 17540982.229811 (variation = 315.584954)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 81: loglikelihood = 17541295.299904 (variation = 313.070093)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 82: loglikelihood = 17541608.941585 (variation = 313.641681)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 83: loglikelihood = 17541927.064950 (variation = 318.123365)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 84: loglikelihood = 17542254.507101 (variation = 327.442151)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 85: loglikelihood = 17542599.989607 (variation = 345.482505)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 86: loglikelihood = 17542963.330823 (variation = 363.341216)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 87: loglikelihood = 17543333.901009 (variation = 370.570187)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 88: loglikelihood = 17543703.929602 (variation = 370.028592)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 89: loglikelihood = 17544104.114236 (variation = 400.184634)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 90: loglikelihood = 17544611.342848 (variation = 507.228613)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 91: loglikelihood = 17545239.162224 (variation = 627.819376)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 92: loglikelihood = 17546216.558331 (variation = 977.396107)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 93: loglikelihood = 17547125.185359 (variation = 908.627027)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 94: loglikelihood = 17547996.791401 (variation = 871.606043)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 95: loglikelihood = 17549032.197959 (variation = 1035.406557)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 96: loglikelihood = 17549875.611526 (variation = 843.413567)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 97: loglikelihood = 17550422.638902 (variation = 547.027376)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 98: loglikelihood = 17550728.176852 (variation = 305.537950)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 99: loglikelihood = 17550973.519255 (variation = 245.342404)
+gmm: sparsity of data posterior: 99.5%
+gmm: mode 406 is nearly empty (mass 5.000000)
+gmm: mode 406 is empty, but no other mode to split could be found
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 100: loglikelihood = 17551195.642174 (variation = 222.122919)
+gmm: em: terminating because the maximum number of iterations (100) has been reached.
+gmm: optimization terminated in 3325.28 s with loglikelihood 17551195.642174
+gmm: all repetitions terminated with final loglikelihood 17551195.642174
+Done!
+Training GMM for SPOOF...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 100
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 60
+vl_gmm: num. data points = 378176
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 45.73 s
+gmm: em: iteration 0: loglikelihood = 10211987.029349 (variation = inf)
+gmm: em: iteration 1: loglikelihood = 14502704.091906 (variation = 4290717.062557)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 2: loglikelihood = 15277210.664654 (variation = 774506.572748)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 3: loglikelihood = 15518953.457379 (variation = 241742.792725)
+gmm: sparsity of data posterior: 99.3%
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 4: loglikelihood = 15635639.702059 (variation = 116686.244680)
+gmm: sparsity of data posterior: 99.4%
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 5: loglikelihood = 15707359.489012 (variation = 71719.786952)
+gmm: sparsity of data posterior: 99.4%
+gmm: em: iteration 6: loglikelihood = 15756469.086461 (variation = 49109.597449)
+gmm: sparsity of data posterior: 99.4%
+gmm: em: iteration 7: loglikelihood = 15792075.665882 (variation = 35606.579421)
+gmm: sparsity of data posterior: 99.4%
+gmm: em: iteration 8: loglikelihood = 15819338.923455 (variation = 27263.257573)
+gmm: sparsity of data posterior: 99.4%
+gmm: em: iteration 9: loglikelihood = 15841168.033162 (variation = 21829.109708)
+gmm: sparsity of data posterior: 99.4%
+gmm: em: iteration 10: loglikelihood = 15859004.448235 (variation = 17836.415073)
+gmm: sparsity of data posterior: 99.4%
+gmm: em: iteration 11: loglikelihood = 15873932.799945 (variation = 14928.351710)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 12: loglikelihood = 15886817.271797 (variation = 12884.471852)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 13: loglikelihood = 15898559.409176 (variation = 11742.137379)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 14: loglikelihood = 15909278.009835 (variation = 10718.600660)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 15: loglikelihood = 15918131.198429 (variation = 8853.188594)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 16: loglikelihood = 15925499.521974 (variation = 7368.323545)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 17: loglikelihood = 15931809.754283 (variation = 6310.232309)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 18: loglikelihood = 15937303.527563 (variation = 5493.773280)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 19: loglikelihood = 15942187.854884 (variation = 4884.327321)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 20: loglikelihood = 15946623.943032 (variation = 4436.088147)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 21: loglikelihood = 15950722.792186 (variation = 4098.849155)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 22: loglikelihood = 15954541.285306 (variation = 3818.493120)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 23: loglikelihood = 15958077.358611 (variation = 3536.073305)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 24: loglikelihood = 15961289.266904 (variation = 3211.908293)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 25: loglikelihood = 15964192.930734 (variation = 2903.663830)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 26: loglikelihood = 15966828.871054 (variation = 2635.940320)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 27: loglikelihood = 15969211.790865 (variation = 2382.919811)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 28: loglikelihood = 15971382.906346 (variation = 2171.115481)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 29: loglikelihood = 15973394.652773 (variation = 2011.746426)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 30: loglikelihood = 15975275.865081 (variation = 1881.212308)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 31: loglikelihood = 15977037.186893 (variation = 1761.321812)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 32: loglikelihood = 15978683.593459 (variation = 1646.406566)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 33: loglikelihood = 15980217.694011 (variation = 1534.100553)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 34: loglikelihood = 15981651.221197 (variation = 1433.527186)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 35: loglikelihood = 15983027.361811 (variation = 1376.140614)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 36: loglikelihood = 15984343.880507 (variation = 1316.518696)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 37: loglikelihood = 15985603.358289 (variation = 1259.477782)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 38: loglikelihood = 15986785.211896 (variation = 1181.853607)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 39: loglikelihood = 15987864.127197 (variation = 1078.915301)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 40: loglikelihood = 15988860.044300 (variation = 995.917103)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 41: loglikelihood = 15989809.011942 (variation = 948.967641)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 42: loglikelihood = 15990690.955587 (variation = 881.943645)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 43: loglikelihood = 15991511.913490 (variation = 820.957903)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 44: loglikelihood = 15992296.364885 (variation = 784.451395)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 45: loglikelihood = 15993042.663095 (variation = 746.298210)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 46: loglikelihood = 15993754.623415 (variation = 711.960320)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 47: loglikelihood = 15994469.773998 (variation = 715.150583)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 48: loglikelihood = 15995230.735039 (variation = 760.961041)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 49: loglikelihood = 15995949.537493 (variation = 718.802454)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 50: loglikelihood = 15996591.102713 (variation = 641.565220)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 51: loglikelihood = 15997167.795136 (variation = 576.692423)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 52: loglikelihood = 15997705.728799 (variation = 537.933663)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 53: loglikelihood = 15998218.423057 (variation = 512.694259)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 54: loglikelihood = 15998734.537137 (variation = 516.114079)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 55: loglikelihood = 15999267.902594 (variation = 533.365457)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 56: loglikelihood = 15999793.777949 (variation = 525.875355)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 57: loglikelihood = 16000277.509687 (variation = 483.731739)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 58: loglikelihood = 16000736.652966 (variation = 459.143279)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 59: loglikelihood = 16001186.439091 (variation = 449.786124)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 60: loglikelihood = 16001631.076497 (variation = 444.637407)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 61: loglikelihood = 16002074.428446 (variation = 443.351949)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 62: loglikelihood = 16002524.757910 (variation = 450.329464)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 63: loglikelihood = 16002998.223172 (variation = 473.465261)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 64: loglikelihood = 16003520.154483 (variation = 521.931311)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 65: loglikelihood = 16004137.950812 (variation = 617.796329)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 66: loglikelihood = 16004936.601713 (variation = 798.650901)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 67: loglikelihood = 16005928.120773 (variation = 991.519059)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 68: loglikelihood = 16006827.469857 (variation = 899.349084)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 69: loglikelihood = 16007419.023885 (variation = 591.554028)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 70: loglikelihood = 16007863.863653 (variation = 444.839768)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 71: loglikelihood = 16008241.178515 (variation = 377.314862)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 72: loglikelihood = 16008575.670550 (variation = 334.492035)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 73: loglikelihood = 16008883.992078 (variation = 308.321528)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 74: loglikelihood = 16009176.787142 (variation = 292.795064)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 75: loglikelihood = 16009458.118914 (variation = 281.331772)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 76: loglikelihood = 16009730.540566 (variation = 272.421652)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 77: loglikelihood = 16009996.308485 (variation = 265.767919)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 78: loglikelihood = 16010257.560519 (variation = 261.252034)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 79: loglikelihood = 16010517.381210 (variation = 259.820691)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 80: loglikelihood = 16010779.168621 (variation = 261.787411)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 81: loglikelihood = 16011045.611124 (variation = 266.442503)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 82: loglikelihood = 16011325.623506 (variation = 280.012382)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 83: loglikelihood = 16011656.214137 (variation = 330.590631)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 84: loglikelihood = 16012054.889244 (variation = 398.675107)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 85: loglikelihood = 16012415.180997 (variation = 360.291753)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 86: loglikelihood = 16012729.759177 (variation = 314.578180)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 87: loglikelihood = 16013044.033874 (variation = 314.274697)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 88: loglikelihood = 16013363.540835 (variation = 319.506961)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 89: loglikelihood = 16013693.055715 (variation = 329.514880)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 90: loglikelihood = 16014034.831878 (variation = 341.776163)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 91: loglikelihood = 16014379.076525 (variation = 344.244647)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 92: loglikelihood = 16014710.482547 (variation = 331.406022)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 93: loglikelihood = 16015027.066925 (variation = 316.584378)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 94: loglikelihood = 16015337.851378 (variation = 310.784453)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 95: loglikelihood = 16015666.370680 (variation = 328.519302)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 96: loglikelihood = 16016053.445031 (variation = 387.074350)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 97: loglikelihood = 16016396.544751 (variation = 343.099720)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 98: loglikelihood = 16016662.310304 (variation = 265.765553)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 99: loglikelihood = 16016900.618326 (variation = 238.308022)
+gmm: sparsity of data posterior: 99.5%
+gmm: em: iteration 100: loglikelihood = 16017113.855228 (variation = 213.236902)
+gmm: em: terminating because the maximum number of iterations (100) has been reached.
+gmm: optimization terminated in 2940.91 s with loglikelihood 16017113.855228
+gmm: all repetitions terminated with final loglikelihood 16017113.855228
+Done!
+Computing scores for development trials...
+Done!
+EER is 14.14
+Computing scores for eval trials...
+Done!
+EER is 33.08
+>> 

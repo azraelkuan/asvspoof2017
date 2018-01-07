@@ -1,0 +1,1015 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+pathToDatabase =
+
+/mnt/speechlab/users/hedi7/data/ASVspoof2017/
+
+Extracting features for GENUINE training data...
+Starting parallel pool (parpool) using the 'local' profile ... connected to 12 workers.
+Done!
+Extracting features for SPOOF training data...
+Done!
+Training GMM for GENUINE...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 100
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 60
+vl_gmm: num. data points = 417193
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 13.49 s
+gmm: em: iteration 0: loglikelihood = 8658370.140977 (variation = inf)
+gmm: detected 4 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 1: loglikelihood = 13277187.690850 (variation = 4618817.549872)
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 2: loglikelihood = 13907915.146548 (variation = 630727.455698)
+gmm: sparsity of data posterior: 98.8%
+gmm: mode 103 is nearly empty (mass 5.000001)
+gmm: mode 103 is empty, but no other mode to split could be found
+gmm: mode 110 is nearly empty (mass 8.132725)
+gmm: reinitializing empty mode 110 with mode 103 (prior 0.000012, mass 5.000001, score -0.000499)
+gmm: detected 10 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 325 is nearly empty (mass 5.918413)
+gmm: reinitializing empty mode 325 with mode 115 (prior 0.000366, mass 152.492079, score -0.000113)
+gmm: detected 10 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 368 is nearly empty (mass 4.000000)
+gmm: reinitializing empty mode 368 with mode 115 (prior 0.000205, mass 152.492079, score 0.000056)
+gmm: detected 9 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 408 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 408 with mode 368 (prior 0.000109, mass 4.000000, score 0.000195)
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 8 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 3: loglikelihood = 14149264.953690 (variation = 241349.807142)
+gmm: sparsity of data posterior: 98.9%
+gmm: mode 103 is nearly empty (mass 3.000000)
+gmm: reinitializing empty mode 103 with mode 408 (prior 0.000051, mass 27.552185, score 0.000082)
+gmm: detected 7 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 7 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 4: loglikelihood = 14261934.735318 (variation = 112669.781628)
+gmm: sparsity of data posterior: 99.0%
+gmm: detected 7 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 5: loglikelihood = 14331590.462228 (variation = 69655.726910)
+gmm: sparsity of data posterior: 99.0%
+gmm: mode 206 is nearly empty (mass 8.044584)
+gmm: reinitializing empty mode 206 with mode 408 (prior 0.000068, mass 34.559165, score -0.000558)
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 6: loglikelihood = 14378977.499361 (variation = 47387.037134)
+gmm: sparsity of data posterior: 99.0%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 7: loglikelihood = 14414394.036831 (variation = 35416.537470)
+gmm: sparsity of data posterior: 99.0%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 8: loglikelihood = 14440826.123657 (variation = 26432.086826)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 9: loglikelihood = 14461471.443264 (variation = 20645.319606)
+gmm: sparsity of data posterior: 99.1%
+gmm: mode 110 is nearly empty (mass 8.000001)
+gmm: reinitializing empty mode 110 with mode 408 (prior 0.000073, mass 33.309614, score -0.000481)
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 10: loglikelihood = 14477860.842738 (variation = 16389.399475)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 11: loglikelihood = 14491702.167598 (variation = 13841.324860)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 12: loglikelihood = 14503478.742031 (variation = 11776.574433)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 13: loglikelihood = 14513544.338459 (variation = 10065.596428)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 14: loglikelihood = 14522179.869678 (variation = 8635.531219)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 15: loglikelihood = 14529648.836375 (variation = 7468.966697)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 16: loglikelihood = 14536169.181108 (variation = 6520.344733)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 17: loglikelihood = 14541782.089127 (variation = 5612.908020)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 18: loglikelihood = 14546621.631025 (variation = 4839.541898)
+gmm: sparsity of data posterior: 99.1%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 19: loglikelihood = 14550841.392911 (variation = 4219.761886)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 7.721229)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 20: loglikelihood = 14554513.679541 (variation = 3672.286630)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 7.024403)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 21: loglikelihood = 14557813.511419 (variation = 3299.831878)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 7.030717)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 22: loglikelihood = 14560841.494327 (variation = 3027.982908)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 7.077180)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 23: loglikelihood = 14563655.959969 (variation = 2814.465642)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 7.364788)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 24: loglikelihood = 14566290.192057 (variation = 2634.232088)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 7.993007)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 25: loglikelihood = 14568772.632835 (variation = 2482.440778)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 26: loglikelihood = 14571133.299029 (variation = 2360.666194)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 27: loglikelihood = 14573417.868601 (variation = 2284.569572)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 28: loglikelihood = 14575690.664732 (variation = 2272.796131)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 8.000001)
+gmm: mode 110 is empty, but no other mode to split could be found
+gmm: detected 7 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 29: loglikelihood = 14577868.955723 (variation = 2178.290991)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 110 is nearly empty (mass 8.000002)
+gmm: reinitializing empty mode 110 with mode 408 (prior 0.000084, mass 35.340196, score -0.000518)
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 30: loglikelihood = 14579446.506304 (variation = 1577.550581)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 31: loglikelihood = 14581192.311116 (variation = 1745.804812)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 32: loglikelihood = 14582752.712940 (variation = 1560.401824)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 33: loglikelihood = 14584204.809554 (variation = 1452.096614)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 34: loglikelihood = 14585550.577448 (variation = 1345.767894)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 35: loglikelihood = 14586820.336443 (variation = 1269.758995)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 36: loglikelihood = 14588016.191264 (variation = 1195.854821)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 37: loglikelihood = 14589129.607313 (variation = 1113.416049)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 38: loglikelihood = 14590176.279927 (variation = 1046.672614)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 39: loglikelihood = 14591170.903208 (variation = 994.623282)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 40: loglikelihood = 14592101.061381 (variation = 930.158173)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 41: loglikelihood = 14592977.434750 (variation = 876.373369)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 42: loglikelihood = 14593816.174419 (variation = 838.739669)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 43: loglikelihood = 14594625.945338 (variation = 809.770919)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 44: loglikelihood = 14595410.615853 (variation = 784.670515)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 45: loglikelihood = 14596168.477728 (variation = 757.861875)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 46: loglikelihood = 14596904.677548 (variation = 736.199820)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 47: loglikelihood = 14597634.552138 (variation = 729.874590)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 48: loglikelihood = 14598356.917013 (variation = 722.364876)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 49: loglikelihood = 14599044.462825 (variation = 687.545811)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 50: loglikelihood = 14599728.629357 (variation = 684.166532)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 51: loglikelihood = 14600399.182424 (variation = 670.553067)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 52: loglikelihood = 14601061.964757 (variation = 662.782333)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 53: loglikelihood = 14601692.468757 (variation = 630.504000)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 54: loglikelihood = 14602285.889687 (variation = 593.420929)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 55: loglikelihood = 14602851.866057 (variation = 565.976370)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 56: loglikelihood = 14603390.011137 (variation = 538.145080)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 57: loglikelihood = 14603906.242650 (variation = 516.231513)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 58: loglikelihood = 14604411.134104 (variation = 504.891455)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 59: loglikelihood = 14604899.033723 (variation = 487.899619)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 60: loglikelihood = 14605373.752841 (variation = 474.719118)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 61: loglikelihood = 14605835.618804 (variation = 461.865963)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 62: loglikelihood = 14606281.204239 (variation = 445.585435)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 63: loglikelihood = 14606715.407698 (variation = 434.203459)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 64: loglikelihood = 14607144.463855 (variation = 429.056158)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 65: loglikelihood = 14607575.646486 (variation = 431.182631)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 66: loglikelihood = 14608011.245204 (variation = 435.598718)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 67: loglikelihood = 14608442.980587 (variation = 431.735383)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 68: loglikelihood = 14608853.237680 (variation = 410.257093)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 69: loglikelihood = 14609239.211117 (variation = 385.973436)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 70: loglikelihood = 14609607.789930 (variation = 368.578814)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 71: loglikelihood = 14609962.393288 (variation = 354.603358)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 72: loglikelihood = 14610308.208672 (variation = 345.815384)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 73: loglikelihood = 14610651.068672 (variation = 342.860000)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 74: loglikelihood = 14610990.524306 (variation = 339.455634)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 75: loglikelihood = 14611321.748219 (variation = 331.223913)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 76: loglikelihood = 14611643.891747 (variation = 322.143529)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 77: loglikelihood = 14611957.683424 (variation = 313.791676)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 78: loglikelihood = 14612265.309449 (variation = 307.626026)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 79: loglikelihood = 14612573.515415 (variation = 308.205966)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 80: loglikelihood = 14612885.147837 (variation = 311.632422)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 81: loglikelihood = 14613199.298698 (variation = 314.150861)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 82: loglikelihood = 14613512.627726 (variation = 313.329028)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 83: loglikelihood = 14613820.169784 (variation = 307.542058)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 84: loglikelihood = 14614120.037149 (variation = 299.867365)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 85: loglikelihood = 14614412.609697 (variation = 292.572549)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 86: loglikelihood = 14614698.509283 (variation = 285.899586)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 87: loglikelihood = 14614978.399250 (variation = 279.889967)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 88: loglikelihood = 14615252.179967 (variation = 273.780717)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 89: loglikelihood = 14615517.066490 (variation = 264.886523)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 90: loglikelihood = 14615768.786962 (variation = 251.720472)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 91: loglikelihood = 14616004.956642 (variation = 236.169680)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 92: loglikelihood = 14616225.105059 (variation = 220.148417)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 93: loglikelihood = 14616430.790202 (variation = 205.685143)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 94: loglikelihood = 14616623.128731 (variation = 192.338529)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 95: loglikelihood = 14616804.379083 (variation = 181.250352)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 96: loglikelihood = 14616977.559146 (variation = 173.180063)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 97: loglikelihood = 14617145.452618 (variation = 167.893473)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 98: loglikelihood = 14617310.169809 (variation = 164.717190)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 99: loglikelihood = 14617473.285537 (variation = 163.115728)
+gmm: sparsity of data posterior: 99.2%
+gmm: detected 6 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 100: loglikelihood = 14617636.474569 (variation = 163.189032)
+gmm: em: terminating because the maximum number of iterations (100) has been reached.
+gmm: optimization terminated in 1451.43 s with loglikelihood 14617636.474569
+gmm: all repetitions terminated with final loglikelihood 14617636.474569
+Done!
+Training GMM for SPOOF...
+vl_gmm: initialization = rand
+vl_gmm: maxNumIterations = 100
+vl_gmm: numRepetitions = 1
+vl_gmm: data type = double
+vl_gmm: data dimension = 60
+vl_gmm: num. data points = 378176
+vl_gmm: num. Gaussian modes = 512
+vl_gmm: lower bound on covariance = [ 0.000100 0.000100 ... 0.000100]
+gmm: clustering: starting repetition 1 of 1
+gmm: model initialized in 8.75 s
+gmm: em: iteration 0: loglikelihood = 8297820.567247 (variation = inf)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 1: loglikelihood = 12484116.256870 (variation = 4186295.689623)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 2: loglikelihood = 12980016.398448 (variation = 495900.141577)
+gmm: sparsity of data posterior: 98.9%
+gmm: mode 217 is nearly empty (mass 7.032274)
+gmm: reinitializing empty mode 217 with mode 392 (prior 0.000025, mass 10.324626, score -0.000340)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 392 (prior 0.000033, mass 10.324626, score -0.000450)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 3: loglikelihood = 13157107.935479 (variation = 177091.537031)
+gmm: sparsity of data posterior: 99.0%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000015, mass 5.982956, score -0.000482)
+gmm: mode 261 is nearly empty (mass 5.982956)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: em: iteration 4: loglikelihood = 13244922.082553 (variation = 87814.147074)
+gmm: sparsity of data posterior: 99.0%
+gmm: mode 217 is nearly empty (mass 7.005540)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000011, mass 3.997410, score -0.000391)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 3.997410)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 5: loglikelihood = 13299828.009321 (variation = 54905.926768)
+gmm: sparsity of data posterior: 99.1%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.000093, score -0.000521)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.000093)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 6: loglikelihood = 13337621.941421 (variation = 37793.932099)
+gmm: sparsity of data posterior: 99.1%
+gmm: mode 217 is nearly empty (mass 6.000086)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.000086, score -0.000521)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 7: loglikelihood = 13365135.990473 (variation = 27514.049052)
+gmm: sparsity of data posterior: 99.1%
+gmm: mode 217 is nearly empty (mass 4.651017)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.042156, score -0.000339)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.042156)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 8: loglikelihood = 13386122.848285 (variation = 20986.857812)
+gmm: sparsity of data posterior: 99.1%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.000136, score -0.000521)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.000136)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 9: loglikelihood = 13402390.050134 (variation = 16267.201849)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.000148)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.000148, score -0.000521)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 10: loglikelihood = 13415351.474428 (variation = 12961.424295)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.787197)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.055883, score -0.000339)
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.055883)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 1 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 11: loglikelihood = 13426263.314985 (variation = 10911.840557)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.000182, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.000182)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 12: loglikelihood = 13435334.883370 (variation = 9071.568384)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.000209)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.000209, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 13: loglikelihood = 13443032.235123 (variation = 7697.351754)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.818047)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.058341, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.058341)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 14: loglikelihood = 13450253.304349 (variation = 7221.069226)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.000296, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.000296)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 15: loglikelihood = 13456482.811930 (variation = 6229.507580)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.000397)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.000397, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 16: loglikelihood = 13461593.632783 (variation = 5110.820853)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.832661)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.059355, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.059355)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 17: loglikelihood = 13466336.956651 (variation = 4743.323869)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.000688, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.000688)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 18: loglikelihood = 13470411.770342 (variation = 4074.813691)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.000878)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.000878, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 19: loglikelihood = 13473854.980724 (variation = 3443.210381)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.821868)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.058572, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.058572)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 20: loglikelihood = 13477145.117694 (variation = 3290.136971)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.001081, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.001081)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 21: loglikelihood = 13479957.593689 (variation = 2812.475995)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.001286)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.001286, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 22: loglikelihood = 13482358.006391 (variation = 2400.412702)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.778954)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.055431, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.055431)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 23: loglikelihood = 13484808.083821 (variation = 2450.077430)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.001523, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.001523)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 24: loglikelihood = 13486938.456123 (variation = 2130.372302)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.001852)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.001852, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 25: loglikelihood = 13488778.075082 (variation = 1839.618959)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.718005)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.050888, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.050888)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 26: loglikelihood = 13490752.050142 (variation = 1973.975060)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.002042, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.002042)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 27: loglikelihood = 13492469.969093 (variation = 1717.918951)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.002463)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.002463, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 28: loglikelihood = 13493951.609032 (variation = 1481.639938)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.667661)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.047162, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.047162)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 29: loglikelihood = 13495619.146709 (variation = 1667.537677)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.002437, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.002437)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 30: loglikelihood = 13497079.120625 (variation = 1459.973916)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.003034)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.003034, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 31: loglikelihood = 13498335.564573 (variation = 1256.443948)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.639008)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.045055, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.045055)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 32: loglikelihood = 13499793.475763 (variation = 1457.911190)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.003104, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.003104)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 33: loglikelihood = 13501057.447916 (variation = 1263.972153)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.004031)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.004031, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 34: loglikelihood = 13502130.263923 (variation = 1072.816007)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.613434)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.043162, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.043162)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 35: loglikelihood = 13503428.653351 (variation = 1298.389428)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.003900, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.003900)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 36: loglikelihood = 13504568.222130 (variation = 1139.568779)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.005293)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.005293, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 37: loglikelihood = 13505531.538755 (variation = 963.316625)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.592109)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.041455, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.041455)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 38: loglikelihood = 13506716.539261 (variation = 1185.000506)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.005038, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.005038)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 39: loglikelihood = 13507724.968554 (variation = 1008.429293)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 6.007544)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.007544, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 40: loglikelihood = 13508552.976267 (variation = 828.007713)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.585851)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.040960, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.040960)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 41: loglikelihood = 13509606.439422 (variation = 1053.463155)
+gmm: sparsity of data posterior: 99.2%
+gmm: mode 217 is nearly empty (mass 4.999998)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.007224, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.007224)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999998, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 42: loglikelihood = 13510476.258683 (variation = 869.819262)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.011958)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.011958, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 43: loglikelihood = 13511154.545593 (variation = 678.286910)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.587042)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.041248, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.041248)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 44: loglikelihood = 13512060.053472 (variation = 905.507879)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999998)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.009037, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.009037)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999998, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 45: loglikelihood = 13512794.470878 (variation = 734.417406)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.016102)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.016102, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 46: loglikelihood = 13513352.226835 (variation = 557.755957)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.587806)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.041594, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.041594)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 47: loglikelihood = 13514142.085525 (variation = 789.858690)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999998)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.011542, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.011542)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999998, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 48: loglikelihood = 13514764.102903 (variation = 622.017378)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.022580)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.022580, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 49: loglikelihood = 13515213.656495 (variation = 449.553591)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.591016)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.042437, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.042437)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 50: loglikelihood = 13515904.315006 (variation = 690.658512)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.014209, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.014209)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 51: loglikelihood = 13516433.446142 (variation = 529.131136)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.031741)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.031741, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 52: loglikelihood = 13516789.327384 (variation = 355.881242)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.594356)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.043047, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.043047)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 53: loglikelihood = 13517377.304666 (variation = 587.977282)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.015724, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.015724)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 54: loglikelihood = 13517805.315611 (variation = 428.010945)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.036823)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.036823, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 55: loglikelihood = 13518072.775660 (variation = 267.460050)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.597212)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.043308, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.043308)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 56: loglikelihood = 13518589.897933 (variation = 517.122272)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.017011, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.017011)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 57: loglikelihood = 13518962.611596 (variation = 372.713664)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.043819)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.043819, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 58: loglikelihood = 13519189.797050 (variation = 227.185454)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.602105)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.043629, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.043629)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 59: loglikelihood = 13519680.253794 (variation = 490.456744)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.022042, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.022042)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 60: loglikelihood = 13520035.965993 (variation = 355.712199)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.077578)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.077578, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 61: loglikelihood = 13520248.452495 (variation = 212.486502)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.610951)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.045498, score -0.000338)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.045498)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 62: loglikelihood = 13520725.189324 (variation = 476.736829)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.999999)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.016742, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.016742)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 4.999999, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 63: loglikelihood = 13521067.717263 (variation = 342.527939)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.034452)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.034452, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 64: loglikelihood = 13521275.317493 (variation = 207.600230)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.625074)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.042151, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.042151)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 65: loglikelihood = 13521755.948412 (variation = 480.630920)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.011494, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.011494)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 66: loglikelihood = 13522102.743935 (variation = 346.795523)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.021770)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.021770, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 67: loglikelihood = 13522304.687230 (variation = 201.943295)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.639561)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.041429, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.041429)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 68: loglikelihood = 13522764.894631 (variation = 460.207400)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.009628, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.009628)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 69: loglikelihood = 13523083.067427 (variation = 318.172796)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.016682)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.016682, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 70: loglikelihood = 13523255.811029 (variation = 172.743602)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.652578)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.041326, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.041326)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 71: loglikelihood = 13523684.929614 (variation = 429.118585)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.007670, score -0.000520)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.007670)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 72: loglikelihood = 13523972.050953 (variation = 287.121339)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.012157)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.012157, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 73: loglikelihood = 13524113.537102 (variation = 141.486149)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 4.659155)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.040721, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.040721)
+gmm: mode 261 is empty, but no other mode to split could be found
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 74: loglikelihood = 13524515.845888 (variation = 402.308786)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 217 with mode 261 (prior 0.000016, mass 6.006197, score -0.000520)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: mode 261 is nearly empty (mass 6.006197)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 5.000000, score -0.000339)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 75: loglikelihood = 13524785.578794 (variation = 269.732906)
+gmm: sparsity of data posterior: 99.3%
+gmm: mode 217 is nearly empty (mass 6.009392)
+gmm: mode 217 is empty, but no other mode to split could be found
+gmm: mode 261 is nearly empty (mass 5.000000)
+gmm: reinitializing empty mode 261 with mode 217 (prior 0.000016, mass 6.009392, score -0.000521)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: detected 2 of 512 modes with at least one dimension with covariance too small (set to lower bound)
+gmm: em: iteration 76: loglikelihood = 13524913.688961 (variation = 128.110167)
+gmm: em: terminating because the algorithm fully converged (log-likelihood variation = 0.000009).
+gmm: optimization terminated in 1109.00 s with loglikelihood 13524913.688961
+gmm: all repetitions terminated with final loglikelihood 13524913.688961
+Done!
+Computing scores for development trials...
+Done!
+EER is 36.03
+Computing scores for eval trials...
+Done!
+EER is 36.17

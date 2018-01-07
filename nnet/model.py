@@ -166,7 +166,6 @@ class VGG(nn.Module):
         batch_size, dim = x.size()
         assert dim == 1001 * 11
         x = x.view(batch_size, 1, self.input_dim, -1)
-
         out = self.features(x)
         out = out.view(out.size(0), -1)
         out = self.linear(out)
@@ -250,7 +249,7 @@ class LCNN(nn.Module):
             nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True),
         )
         self.block = nn.Sequential(
-            mfm(20064, 256, type=0),
+            mfm(24576, 256, type=0), # 32400 24576
             nn.Dropout(),
             nn.Linear(256, num_classes)
         )
@@ -269,10 +268,10 @@ class LCNN(nn.Module):
     def init_weight(self):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
-                nn.init.xavier_uniform(m.weight.data)
+                nn.init.xavier_normal(m.weight.data)
                 m.bias.data.zero_()
             elif isinstance(m, nn.Linear):
-                nn.init.xavier_uniform(m.weight.data)
+                nn.init.xavier_normal(m.weight.data)
                 m.bias.data.zero_()
 
 

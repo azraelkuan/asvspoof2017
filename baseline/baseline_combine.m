@@ -16,6 +16,7 @@ clear; close all; clc;
 addpath(genpath('utility'));
 addpath(genpath('CQCC_v1.0'));
 addpath(genpath('bosaris_toolkit'));
+addpath(genpath('voicebox'));
 
 % set paths to the wave files and protocols
 %pathToDatabase = fullfile('..','ASVspoof2017_train_dev','wav');
@@ -36,9 +37,15 @@ labels = protocol{2};
 
 fmax = 8000;
 fmin = 7000;
-B=2048;
-d=2048;
+B=1024;
+d=1024;
 cf=29;
+
+frame_length = 0.025; %20ms
+frame_hop = 0.01; %10ms
+n_MFCC = 29;
+fl=0.375;
+fh=0.5;
 
 % get indices of genuine and spoof files
 genuineIdx = find(strcmp(labels,'genuine'));
@@ -57,9 +64,11 @@ parfor i=1:length(genuineIdx)
     [x,fs] = audioread(filePath);
 
     tmp_fea = cqcc(x, fs, B, fmax, fmin, d, cf, 'ZsdD');
+    tmp_fea1 = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
+    fea = [tmp_fea tmp_fea1]
 
-    genuineFeatureCell{i} = tmp_fea
-    parsave(save_path, tmp_fea)
+    genuineFeatureCell{i} = fea
+    % parsave(save_path, tmp_fea)
 end
 disp('Done!');
 
@@ -73,9 +82,11 @@ parfor i=1:length(spoofIdx)
     filePath = fullfile(pathToDatabase,'ASVspoof2017_train',filelist{spoofIdx(i)});
     [x,fs] = audioread(filePath);
     tmp_fea = cqcc(x, fs, B, fmax, fmin, d, cf, 'ZsdD');
+    tmp_fea1 = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
+    fea = [tmp_fea tmp_fea1]
 
-    spoofFeatureCell{i} = tmp_fea
-    parsave(save_path, tmp_fea)
+    spoofFeatureCell{i} = fea
+    % parsave(save_path, tmp_fea)
 end
 disp('Done!');
 
@@ -114,8 +125,11 @@ parfor i=1:length(filelist)
     [x,fs] = audioread(filePath);
     % featrue extraction
     tmp_fea = cqcc(x, fs, B, fmax, fmin, d, cf, 'ZsdD');
-    x_cqcc = tmp_fea
-    parsave(save_path, tmp_fea)
+    tmp_fea1 = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
+    fea = [tmp_fea tmp_fea1]
+
+    x_cqcc = fea
+    % parsave(save_path, tmp_fea)
 
     %score computation
     llk_genuine = mean(compute_llk(x_cqcc,genuineGMM.m,genuineGMM.s,genuineGMM.w));
@@ -150,8 +164,11 @@ parfor i=1:length(filelist)
     [x,fs] = audioread(filePath);
     % featrue extraction
     tmp_fea = cqcc(x, fs, B, fmax, fmin, d, cf, 'ZsdD');
-    x_cqcc = tmp_fea
-    parsave(save_path, tmp_fea)
+    tmp_fea1 = melcepst(x, fs, '0dD', n_MFCC, floor(3*log(fs)) ,frame_length * fs, frame_hop * fs, fl, fh)';
+    fea = [tmp_fea tmp_fea1]
+
+    x_cqcc = fea
+    % parsave(save_path, tmp_fea)
 
     %score computation
     llk_genuine = mean(compute_llk(x_cqcc,genuineGMM.m,genuineGMM.s,genuineGMM.w));

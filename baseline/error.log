@@ -1,0 +1,6 @@
+{Error using cqcc (line 115)
+Index exceeds matrix dimensions.
+
+Error in baseline_cqcc (line 52)
+parfor i=1:length(genuineIdx)
+} 
