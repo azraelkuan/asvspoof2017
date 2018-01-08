@@ -7,7 +7,7 @@ from scipy import signal
 # parameters
 sample_rate = 16000
 n_fft = int(25 * sample_rate / 1000)
-hop_length = int(5 * sample_rate / 1000)
+hop_length = int(10 * sample_rate / 1000)
 
 n_imfcc = 13
 n_mfcc = 13
@@ -46,10 +46,7 @@ def trim_silence(audio, threshold=0.1, frame_length=2048):
 
 def extract_imfcc(wav_path):
     audio, sr = librosa.load(wav_path, sr=16000)
-    y = trim_silence(audio)
-    if y.size == 0:
-        y =audio
-    S = np.abs(librosa.core.stft(y, n_fft=n_fft, hop_length=hop_length)) ** 2.0
+    S = np.abs(librosa.core.stft(audio, n_fft=n_fft, hop_length=hop_length)) ** 2.0
     mel_basis = librosa.filters.mel(sr, n_fft)
     mel_basis = np.linalg.pinv(mel_basis).T
     mel = np.dot(mel_basis, S)
@@ -85,7 +82,7 @@ def extract_cqt(wav_path):
 def extract_spect(wav_path):
     audio, sr = librosa.load(wav_path, sr=16000)
     # audio = trim_silence(audio, 0.01)
-    S, _ = librosa.core.spectrum._spectrogram(audio, hop_length=150, n_fft=1500, power=2)
+    S, _ = librosa.core.spectrum._spectrogram(audio, hop_length=100, n_fft=1000, power=2)
     return librosa.power_to_db(S)
 
 
@@ -109,7 +106,7 @@ def extract_fft(wav_path):
 
     def _stft_parameters():
         # n_fft = (num_freq - 1) * 2
-        n_fft = 1500
+        n_fft = 1800
         hop_length = 150
         # hop_length = int(frame_shift_ms / 1000 * sample_rate)
         # win_length = int(frame_length_ms / 1000 * sample_rate)
@@ -126,9 +123,6 @@ def extract_fft(wav_path):
 
 def extract_db4(wav_path):
     audio, sr = librosa.load(wav_path, sr=16000)
-    # y = trim_silence(audio)
-    # if y.size == 0:
-    #     y =audio
     S, _ = librosa.core.spectrum._spectrogram(audio, hop_length=150, n_fft=1500, power=2)
     S =librosa.power_to_db(S)
     cA, cD = pywt.dwt(S, 'db4')
@@ -137,9 +131,6 @@ def extract_db4(wav_path):
 
 def extract_db8(wav_path):
     audio, sr = librosa.load(wav_path, sr=16000)
-    # y = trim_silence(audio)
-    # if y.size == 0:
-    #     y =audio
     S, _ = librosa.core.spectrum._spectrogram(audio, hop_length=150, n_fft=1500, power=2)
     S =librosa.power_to_db(S)
     cA, cD = pywt.dwt(S, 'db8')

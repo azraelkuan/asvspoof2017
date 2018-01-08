@@ -55,15 +55,15 @@ def main():
     logging.basicConfig(
         level=args.level, format="%(asctime)s | %(levelname)s | %(message)s")
     evallabtoscore = labeltoscore(args.evallabels, args.evalscores)
-    positives = evallabtoscore[args.genuinelabel]
-    for label in evallabtoscore.keys():
-        # Skip genuine data ( scoring with itself)
-        if label == args.genuinelabel:
-            continue
-        negatives = evallabtoscore[label]
-        eer_label = bob.measure.eer_rocch(negatives, positives)
-        print("[Eval] LAB: {} EER: {:=4.3f}  ".format(
-                     label, 100*eer_label))
+    # positives = evallabtoscore[args.genuinelabel]
+    # for label in evallabtoscore.keys():
+    #     # Skip genuine data ( scoring with itself)
+    #     if label == args.genuinelabel:
+    #         continue
+    #     negatives = evallabtoscore[label]
+    #     eer_label = bob.measure.eer_rocch(negatives, positives)
+    #     print("[Eval] LAB: {} EER: {:=4.3f}  ".format(
+    #                  label, 100*eer_label))
 
     evalallnegatives = list(itertools.chain.from_iterable(
         [v for k, v in evallabtoscore.items() if k != args.genuinelabel]))

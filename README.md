@@ -57,8 +57,9 @@ in the `nnet` dir, we use some deep learning algorithm to solve this problem
 
 |  system  | feature | EER(Dev) | EER(Eval) | EER(Eval) | Frequency Range | B  |       Remarks         |
 | :------: | :-----: | :------: | :-------: | :-------: | :-------: | :----: | :------------------: |
-| DNN      | cqcc    | 8.56     |  35.603   |           |                 |    |                       |
-| LCNN     | cqcc    | 7.293    |  28.009   |           |                 |    | lr 5e-4 bs 8 wd 1e-2  |
+| LCNN     | cqcc    | 11.827     |  23.919   |     20.926      |                 |    |                       |
+| LCNN     | fft    | 10.298    |  23.418   |     17.983      |                 |    |   |
+| LCNN     | fft    | 9.921   |  22.235   |   19.365        |                 |    |   |
 
 
 

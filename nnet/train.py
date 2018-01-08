@@ -78,33 +78,37 @@ def main():
     if mode == "train":
         train_data, train_label = load_data("train", train_protocol, mode=mode, feature_type=feature_type)
 
-        mean = np.mean(train_data, axis=0)
-        std = np.std(train_data, axis=0)
-        train_data = (train_data - mean)/std
+        # for i in range(len(train_data)):
+        #     mean = np.mean(train_data[i], axis=0)
+        #     std = np.std(train_data[i], axis=0)
+        #     train_data[i] = (train_data[i] - mean) / std
 
         train_dataset = ASVDataSet(train_data, train_label, mode=mode)
-        train_dataloader = DataLoader(train_dataset, batch_size=batch_size, num_workers=4, shuffle=True)
+        train_dataloader = DataLoader(train_dataset, batch_size=batch_size, num_workers=2, shuffle=True)
 
         dev_data, dev_label = load_data("dev", dev_protocol, mode=mode, feature_type=feature_type)
 
-        mean, std = np.mean(dev_data, axis=0), np.std(dev_data, axis=0)
-        dev_data = (dev_data - mean)/std
+        # for i in range(len(dev_data)):
+        #     mean = np.mean(dev_data[i], axis=0)
+        #     std = np.std(dev_data[i], axis=0)
+        #     dev_data[i] = (dev_data[i] - mean) / std
 
         dev_dataset = ASVDataSet(dev_data, dev_label, mode=mode)
-        dev_dataloader = DataLoader(dev_dataset, batch_size=batch_size, num_workers=4, shuffle=False)
+        dev_dataloader = DataLoader(dev_dataset, batch_size=batch_size, num_workers=2, shuffle=False)
     elif mode == "final":
-        train_data, train_label = load_data(["train", "dev"], final_protocol, mode=mode, feature_type=feature_type)
+        train_data, train_label = load_data(["train", "dev"], final_protocol,
+                                            mode=mode, feature_type=feature_type)
         train_data = np.array(train_data)
         mean = np.mean(train_data, axis=0)
         std = np.std(train_data, axis=0)
         train_data = (train_data - mean) / std
         train_dataset = ASVDataSet(train_data, train_label, mode="train")
-        train_dataloader = DataLoader(train_dataset, batch_size=batch_size, num_workers=4, shuffle=True)
+        train_dataloader = DataLoader(train_dataset, batch_size=batch_size, num_workers=2, shuffle=True)
 
     if "lcnn" in args.tm:
         model = LCNN(input_dim=77, num_classes=2)
     elif "dnn" in args.tm:
-        model = DNN(11275, 2048, 2)
+        model = DNN(990, 512, 2)  # mfcc imfcc cqt 429 cqcc 990
     elif "vgg" in args.tm:
         model = VGG(77, "VGG11")
     elif "cnn" in args.tm:
@@ -114,7 +118,7 @@ def main():
         model = model.cuda()
     print(model)
     cross_entropy = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(params=model.parameters(), lr=args.lr, momentum=0.9, nesterov=True, weight_decay=1e-2)
+    optimizer = optim.ASGD(params=model.parameters(), lr=args.lr, weight_decay=1e-4)
     scheduler = ReduceLROnPlateau(optimizer, patience=0, verbose=True, factor=0.1, min_lr=1e-7)
 
     best_dev_accuracy = 0
@@ -148,11 +152,11 @@ def main():
             if train_accuracy > best_train_accuracy:
                 best_train_accuracy = train_accuracy
                 save_checkpoint(
-                    {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': train_accuracy, 'mean': mean, 'std': std},
+                    {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': train_accuracy},
                     save_path=os.path.join(save_dir, "best_eval.pkl")
                 )
             save_checkpoint(
-                {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': train_accuracy, 'mean': mean, 'std': std},
+                {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': train_accuracy},
                 save_path=os.path.join(save_dir, "final_eval.pkl")
             )
             print("Epoch [%d/%d], Loss: %.4fe-4,  Train Acc %.2f%%" % (
@@ -168,14 +172,14 @@ def main():
             dev_accuracy, dev_loss = get_test_accuracy(dev_dataloader, model, cross_entropy)
 
             save_checkpoint(
-                {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': dev_accuracy, 'mean': mean, 'std': std},
+                {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': dev_accuracy},
                 save_path=os.path.join(save_dir, 'final_dev.pkl')
             )
 
             if dev_accuracy > best_dev_accuracy:
                 best_dev_accuracy = dev_accuracy
                 save_checkpoint(
-                    {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': dev_accuracy, 'mean': mean, 'std': std},
+                    {'state_dict': model.cpu(), 'epoch': epoch + 1, 'acc': dev_accuracy},
                     save_path=os.path.join(save_dir, 'best_dev.pkl')
                 )
 
